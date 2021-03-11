@@ -25,17 +25,32 @@ class Calculator {
 
   addNumber (num) {
       if (num==="." && this.firstNumber.includes(".")) return
+      if (num==="±") {
+        try{
+          if (this.firstNumber.includes("±")) {
+            this.firstNumber=this.firstNumber.replace("-", "") 
+            return
+          } else {
+            this.firstNumber = "-" + this.firstNumber.toString()
+            return
+          }
+        }
+        catch(err){
+          document.getElementById("demo").innerHTML = err.message;
+        }
+      }
       this.firstNumber =this.firstNumber.toString() + num.toString()
   }
+  negativeNum () {}
 
   ope (operator) {
-    this.operator = operator
+    
     if (this.firstNumber === "") return
     if (this.secondNumber !== "") {
       this.chooseOpe()
       this.operator=undefined
     }
-    
+    this.operator = operator
     this.secondNumber=this.firstNumber
     this.firstNumber=""
   }
