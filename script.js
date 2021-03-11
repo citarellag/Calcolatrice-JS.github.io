@@ -6,6 +6,20 @@ const ugualeButtons = document.querySelector("[dataEquals]")
 const currentnum = document.querySelector("[data-current-operand]")
 const prevnum = document.querySelector("[data-previous-operand]")
 
+const CodeKey = {
+  48: 0,
+  49: 1,
+  50: 2,
+  51: 3,
+  52: 4,
+  53: 5,
+  54: 6,
+  55: 7,
+  56: 8,
+  57: 9
+
+}
+
 class Calculator {
   constructor(firstNumberText, secondNumberText) {
     this.firstNumberText=firstNumberText
@@ -26,22 +40,19 @@ class Calculator {
   addNumber (num) {
       if (num==="." && this.firstNumber.includes(".")) return
       if (num==="±") {
-        try{
-          if (this.firstNumber.includes("±")) {
-            this.firstNumber=this.firstNumber.replace("-", "") 
-            return
-          } else {
-            this.firstNumber = "-" + this.firstNumber.toString()
-            return
-          }
-        }
-        catch(err){
-          document.getElementById("demo").innerHTML = err.message;
+        if (this.firstNumber.includes("-")) {
+          this.firstNumber=this.firstNumber.replace("-", "") 
+          return
+        } else if (this.firstNumber==="") {
+          this.firstNumber = "-"
+          return
+        } else {
+          this.firstNumber = "-" + this.firstNumber.toString()
+          return
         }
       }
       this.firstNumber =this.firstNumber.toString() + num.toString()
   }
-  negativeNum () {}
 
   ope (operator) {
     
@@ -98,7 +109,13 @@ class Calculator {
       return integerDisplay
     }
   }
+
   updateDisplayNum () {
+
+    if (this.firstNumber === "-"){
+      this.firstNumberText.innerText="-"
+      return
+    }
     this.firstNumberText.innerText = this.checkDiplayNum(this.firstNumber)
     if (this.operator != undefined) {
       this.secondNumberText.innerText = `${this.checkDiplayNum(this.secondNumber)} ${this.operator}`
@@ -140,3 +157,11 @@ clearButtons.addEventListener("click", button => {
   cal.delete()
   cal.updateDisplayNum()
 })
+
+document.addEventListener("keydown", function(event) {
+  document.getElementById("demo").innerHTML = event.KeyCode
+  if (typeof event.KeyCode >= 48 && event.KeyCode <= 57) {
+    cal.addNumber(CodeKey[event.KeyCode])
+    cal.updateDisplayNum()
+  }
+}, true)
