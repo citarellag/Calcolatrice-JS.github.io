@@ -1,1 +1,60 @@
-Hello World
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calc</title>
+        <link href="pattern.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
+                <div class="dropdown-content">
+                    <a href="Programs HTML\Percent.html">Percentuale</a>
+                    <a href="Programs HTML\Rad_powers.html">Potenze e Radici</a>
+                </div>
+            </li>
+            <li><a href="#news">Algebra</a></li>
+            <li><a href="#news">Fisica</a></li>
+            <li><a href="#news">Geometria Piana</a></li>
+            <li><a href="#news">Geometria Solida</a></li>
+            <li><a href="#news">Help</a></li>
+        </ul>
+        
+        <h1>Calcolatrice Intelligente</h1>
+        <p id="demo"></p>
+
+        <div class="outp">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+
+        <div class="calcbtn">
+            <button dataClearAll class=larger>CA</button>
+            <button dataClear>C</button>
+            <button dataOperator>÷</button>
+            <button dataNumber>7</button>
+            <button dataNumber>8</button>
+            <button dataNumber>9</button>
+            <button dataOperator>x</button>
+            <button dataNumber>4</button>
+            <button dataNumber>5</button>
+            <button dataNumber>6</button>
+            <button dataOperator>-</button>
+            <button dataNumber>1</button>
+            <button dataNumber>2</button>
+            <button dataNumber>3</button> 
+            <button dataOperator>+</button>
+            <button dataNumber>.</button>
+            <button dataNumber>0</button>
+            <button dataEquals class=larger>=</button>
+        </div>
+
+        
+        <script src="pattern.css"></script>
+    </body>
+</html>
