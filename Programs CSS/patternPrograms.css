@@ -30,7 +30,7 @@ h1 {
     color: rgb(0, 0, 0);
     margin: 0;
     position: absolute;
-    top: 12%;
+    top: 16%;
     left: 38%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -40,7 +40,7 @@ h1 {
     color: rgb(0, 0, 0);
     margin: 0;
     position: absolute;
-    top: 12%;
+    top: 16%;
     left: 65%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -50,7 +50,7 @@ h1 {
     margin: 0;
     font-size: 30px;
     position: absolute;
-    top: 25%;
+    top: 31%;
     left: 42%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -60,8 +60,68 @@ h1 {
     margin: 0;
     font-size: 30px;
     position: absolute;
-    top: 25%;
+    top: 31%;
     left: 69%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+  
+  }
+  
+  li {
+    float: left;
+    margin: auto;
+    border: 3px solid #000000;
+    background-color: rgb(58, 58, 58);
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(68, 68, 68);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(116, 116, 116);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: auto;
+    border: 2px solid #000000;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(133, 133, 133);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
