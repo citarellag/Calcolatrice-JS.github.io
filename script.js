@@ -54,7 +54,13 @@ class Calculator {
   }
 
   delete () {
-    this.firstNumber = this.firstNumber.substr(0, this.firstNumber.length-1)
+    if (this.firstNumber === "" && this.operator !== undefined ) {
+      this.operator= undefined
+      this.firstNumber = this.secondNumber
+      this.secondNumber = ""
+    } else {
+      this.firstNumber = this.firstNumber.substr(0, this.firstNumber.length-1)
+    }
   }
 
   addNumber (num) {
@@ -181,7 +187,7 @@ document.addEventListener("keydown", function(event) {
   if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode>=96 && event.keyCode<=105) || event.keyCode == 78 || event.keyCode == 110 || event.keyCode == 190) {
     cal.addNumber(CodeKey[event.keyCode])
     cal.updateDisplayNum()
-  } else if (event.keyCode == 27) {
+  } else if (event.keyCode == 46) {
     cal.clearAll()
     cal.updateDisplayNum()
   } else if (event.keyCode == 8) {
