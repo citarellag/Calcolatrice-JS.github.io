@@ -16,7 +16,27 @@ const CodeKey = {
   54: 6,
   55: 7,
   56: 8,
-  57: 9
+  57: 9,
+  88: "x",
+  96: 0,
+  97: 1,
+  98: 2,
+  99: 3,
+  100: 4,
+  101: 5,
+  102: 6,
+  103: 7,
+  104: 8,
+  105: 9,
+  106: "x",
+  107: "+",
+  109: "-",
+  110: ".",
+  111: "÷",
+  187: "+",
+  188: ".",
+  189: "-",
+  190: "÷"
 
 }
 
@@ -38,20 +58,20 @@ class Calculator {
   }
 
   addNumber (num) {
-      if (num==="." && this.firstNumber.includes(".")) return
-      if (num==="±") {
-        if (this.firstNumber.includes("-")) {
-          this.firstNumber=this.firstNumber.replace("-", "") 
-          return
-        } else if (this.firstNumber==="") {
-          this.firstNumber = "-"
-          return
-        } else {
-          this.firstNumber = "-" + this.firstNumber.toString()
-          return
-        }
+    if (num==="." && this.firstNumber.includes(".")) return
+    if (num==="±") {
+      if (this.firstNumber.includes("-")) {
+        this.firstNumber=this.firstNumber.replace("-", "") 
+        return
+      } else if (this.firstNumber==="") {
+        this.firstNumber = "-"
+        return
+      } else {
+        this.firstNumber = "-" + this.firstNumber.toString()
+        return
       }
-      this.firstNumber =this.firstNumber.toString() + num.toString()
+    }
+    this.firstNumber =this.firstNumber.toString() + num.toString()
   }
 
   ope (operator) {
@@ -126,8 +146,6 @@ class Calculator {
 }
 
 
-
-
 const cal = new Calculator (currentnum, prevnum)
 
 numButtons.forEach(button => {
@@ -158,10 +176,23 @@ clearButtons.addEventListener("click", button => {
   cal.updateDisplayNum()
 })
 
+
 document.addEventListener("keydown", function(event) {
-  document.getElementById("demo").innerHTML = event.KeyCode
-  if (typeof event.KeyCode >= 48 && event.KeyCode <= 57) {
-    cal.addNumber(CodeKey[event.KeyCode])
+  if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode>=96 && event.keyCode<=105) || event.keyCode == 110 || event.keyCode == 188) {
+    cal.addNumber(CodeKey[event.keyCode])
+    cal.updateDisplayNum()
+  } else if (event.keyCode == 27) {
+    cal.clearAll()
+    cal.updateDisplayNum()
+  } else if (event.keyCode == 8) {
+    cal.delete()
+    cal.updateDisplayNum()
+  } else if (event.keyCode == 88 || event.keyCode == 106 || event.keyCode == 107 || event.keyCode == 109 || event.keyCode == 111 || event.keyCode == 187 || event.keyCode == 189 || event.keyCode == 190 ) {
+    cal.ope(CodeKey[event.keyCode])
+    cal.updateDisplayNum()
+  } else if (event.keyCode == 13 ) {
+    cal.chooseOpe()
     cal.updateDisplayNum()
   }
 }, true)
+
