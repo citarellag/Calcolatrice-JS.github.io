@@ -17,6 +17,7 @@ const CodeKey = {
   55: 7,
   56: 8,
   57: 9,
+  78: "±",
   88: "x",
   96: 0,
   97: 1,
@@ -34,9 +35,8 @@ const CodeKey = {
   110: ".",
   111: "÷",
   187: "+",
-  188: ".",
   189: "-",
-  190: "÷"
+  190: "."
 
 }
 
@@ -178,7 +178,7 @@ clearButtons.addEventListener("click", button => {
 
 
 document.addEventListener("keydown", function(event) {
-  if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode>=96 && event.keyCode<=105) || event.keyCode == 110 || event.keyCode == 188) {
+  if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode>=96 && event.keyCode<=105) || event.keyCode == 78 || event.keyCode == 110 || event.keyCode == 190) {
     cal.addNumber(CodeKey[event.keyCode])
     cal.updateDisplayNum()
   } else if (event.keyCode == 27) {
