@@ -30,7 +30,7 @@ h1 {
     color: rgb(0, 0, 0);
     margin: 0;
     position: absolute;
-    top: 16%;
+    top: 18%;
     left: 38%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -40,17 +40,17 @@ h1 {
     color: rgb(0, 0, 0);
     margin: 0;
     position: absolute;
-    top: 16%;
-    left: 65%;
+    top: 18%;
+    left: 67%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .left h2 {
     margin: 0;
-    font-size: 30px;
+    font-size: 200%;
     position: absolute;
-    top: 31%;
+    top: 35%;
     left: 42%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -58,10 +58,10 @@ h1 {
 
 .right h2 {
     margin: 0;
-    font-size: 30px;
+    font-size: 200%;
     position: absolute;
-    top: 31%;
-    left: 69%;
+    top: 35%;
+    left: 71%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
