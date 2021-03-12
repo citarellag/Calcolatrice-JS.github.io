@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #363636, #a3a3a3);
+  background: linear-gradient(to right, #000000, #00aeff);
 }
 
 h1 {
@@ -18,16 +18,16 @@ button {
   cursor: pointer;
   border: 1px solid rgb(0, 0, 0);
   outline: none;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(0, 153, 255);
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: rgb(44, 44, 44);
+  background-color: #002fffbd;
 }
 
 button:active {
-  background-color: rgb(44, 44, 44);
+  background-color: #002fffbd;
   transform: translateY(5px);
 }
 
@@ -82,7 +82,7 @@ li {
   float: left;
   margin: auto;
   border: 3px solid #000000;
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(0, 86, 156);
 }
 
 li a, .dropbtn {
@@ -94,7 +94,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(68, 68, 68);
+  background-color: #008cff;
 }
 
 li.dropdown {
@@ -104,7 +104,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(116, 116, 116);
+  background-color: #00aeff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -121,7 +121,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background-color: rgb(133, 133, 133);
+  background-color: #00e1ff;
 }
 
 .dropdown:hover .dropdown-content {

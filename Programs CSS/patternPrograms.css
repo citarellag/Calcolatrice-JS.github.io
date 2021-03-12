@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: red;
+    background: linear-gradient(to right, #363636, #a3a3a3);
 }
   
 h1 {
@@ -10,4 +10,58 @@ h1 {
     font-family: 'Segoe UI', sans-serif;
     font-style: bolder;
     font-size: 40px;
+}
+
+.left .right {  
+    position: relative;
+}
+
+.left button, .right button {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+.left h1 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    position: absolute;
+    top: 12%;
+    left: 38%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.right h1 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    position: absolute;
+    top: 12%;
+    left: 65%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.left h2 {
+    margin: 0;
+    font-size: 30px;
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.right h2 {
+    margin: 0;
+    font-size: 30px;
+    position: absolute;
+    top: 25%;
+    left: 69%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
