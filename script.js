@@ -115,6 +115,7 @@ class Calculator {
       default:
         return
     }
+    ris=Math.round(ris * 1000000000) / 1000000000
     this.firstNumber = ris
     this.operator = undefined
     this.secondNumber = ""
