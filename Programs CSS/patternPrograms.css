@@ -16,16 +16,6 @@ h1 {
     position: relative;
 }
 
-.left button, .right button {
-    display: inline-block;
-    font-size: 2rem;
-    cursor: pointer;
-    border: 1px solid rgb(0, 0, 0);
-    outline: none;
-    background-color: rgb(100, 100, 100);
-    border-radius: 5px;
-}
-
 .left h1 {
     color: rgb(0, 0, 0);
     margin: 0;
@@ -66,6 +56,9 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+.left a, .right a {
+  color: rgb(200, 0, 0);
+}
 
 ul {
     list-style-type: none;
