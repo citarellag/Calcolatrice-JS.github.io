@@ -1,120 +1,124 @@
 body {
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(to right, #363636, #a3a3a3);
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #363636, #a3a3a3);
 }
   
 h1 {
-    color: white;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    font-style: bolder;
-    font-size: 40px;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-style: bolder;
+  font-size: 40px;
 }
 
 .left .right {  
-    position: relative;
+  position: relative;
 }
 
 .left h1 {
-    color: rgb(0, 0, 0);
-    margin: 0;
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .right h1 {
-    color: rgb(0, 0, 0);
-    margin: 0;
-    position: absolute;
-    top: 49%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .left h2 {
-    margin: 0;
-    font-size: 200%;
-    position: absolute;
-    top: 31%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 200%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .right h2 {
-    margin: 0;
-    font-size: 200%;
-    position: absolute;
-    top: 62%;
-    left: 49%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 200%;
+  position: absolute;
+  top: 102%;
+  left: 49%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .left a, .right a {
-  color: rgb(200, 0, 0);
+color: rgb(200, 0, 0);
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin: auto;
-  
-  }
-  
-  li {
-    float: left;
-    margin: auto;
-    border: 3px solid #000000;
-    background-color: rgb(58, 58, 58);
-  }
-  
-  li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(68, 68, 68);
-  }
-  
-  li.dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(116, 116, 116);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    margin: auto;
-    border: 2px solid #000000;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgb(133, 133, 133);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: auto;
+
+}
+
+li {
+  float: left;
+  margin: auto;
+  border: 3px solid #000000;
+  background-color: rgb(58, 58, 58);
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(68, 68, 68);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(116, 116, 116);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin: auto;
+  border: 2px solid #000000;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(133, 133, 133);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
