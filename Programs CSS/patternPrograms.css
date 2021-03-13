@@ -21,7 +21,7 @@ h1 {
     margin: 0;
     position: absolute;
     top: 18%;
-    left: 38%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -30,8 +30,8 @@ h1 {
     color: rgb(0, 0, 0);
     margin: 0;
     position: absolute;
-    top: 18%;
-    left: 67%;
+    top: 49%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -40,8 +40,8 @@ h1 {
     margin: 0;
     font-size: 200%;
     position: absolute;
-    top: 35%;
-    left: 42%;
+    top: 33%;
+    left: 55%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -50,8 +50,8 @@ h1 {
     margin: 0;
     font-size: 200%;
     position: absolute;
-    top: 35%;
-    left: 71%;
+    top: 64%;
+    left: 54%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
