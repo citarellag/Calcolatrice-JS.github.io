@@ -40,8 +40,8 @@ h1 {
     margin: 0;
     font-size: 200%;
     position: absolute;
-    top: 33%;
-    left: 55%;
+    top: 31%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -50,8 +50,8 @@ h1 {
     margin: 0;
     font-size: 200%;
     position: absolute;
-    top: 64%;
-    left: 54%;
+    top: 62%;
+    left: 49%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
