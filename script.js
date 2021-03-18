@@ -196,6 +196,7 @@ clearButtons.addEventListener("click", button => {
 document.addEventListener("keydown", function(event) {
   if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode>=96 && event.keyCode<=105) || event.keyCode == 78 || event.keyCode == 110 || event.keyCode == 190) {
     cal.addNumber(CodeKey[event.keyCode])
+    cal.easterEgg()
     cal.updateDisplayNum()
   } else if (event.keyCode == 46) {
     cal.clearAll()
