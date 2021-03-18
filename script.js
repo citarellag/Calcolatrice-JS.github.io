@@ -82,7 +82,7 @@ class Calculator {
 
   easterEgg () {
     if (this.firstNumber==="2806200528") {
-      window.open("https://youtu.be/AbhP25EfjHM")
+      window.open("https://youtu.be/9fjETxpdAE0")
     }
   }
 
