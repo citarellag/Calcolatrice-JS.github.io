@@ -80,6 +80,12 @@ class Calculator {
     this.firstNumber =this.firstNumber.toString() + num.toString()
   }
 
+  easterEgg () {
+    if (this.firstNumber==="2806200528") {
+      window.open("https://youtu.be/AbhP25EfjHM")
+    }
+  }
+
   ope (operator) {
     
     if (this.firstNumber === "") return
@@ -159,6 +165,7 @@ numButtons.forEach(button => {
   button.addEventListener("click", () => {
     cal.addNumber(button.innerText)
     cal.updateDisplayNum()
+    cal.easterEgg()
   })
 })
 opeButtons.forEach(button => {
