@@ -83,6 +83,8 @@ class Calculator {
   easterEgg () {
     if (this.firstNumber==="2806200528") {
       window.open("https://youtu.be/9fjETxpdAE0")
+    } else if (this.firstNumber==="2310200523"){
+      window.open("https://youtu.be/OC4P_vffmow")
     }
   }
 
