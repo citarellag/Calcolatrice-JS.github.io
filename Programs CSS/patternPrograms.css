@@ -122,3 +122,69 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+button {
+  position: relative;
+  left: 40%;
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(100, 100, 100);
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+button:active {
+  background-color: rgb(44, 44, 44);
+  transform: translateY(5px);
+}
+
+input {
+  position: relative;
+  left: 40%;
+  display: inline-block;
+  font-size: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(100, 100, 100);
+  border-radius: 5px;
+}
+
+.result h2 {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  left: 40%;
+}
+
+.base h3 {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  left: 37%;
+  top: 19%;
+}
+
+.esp h3 {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  left: 35%;
+  top: 25%;
+}
+
+.radicando h3 {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  left: 35%;
+  top: 54%;
+}
+
+.radice h3 {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  left: 36%;
+  top: 60%;
+}

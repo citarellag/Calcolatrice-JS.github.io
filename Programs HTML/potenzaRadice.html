@@ -4,26 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
   <title>Potenze e radici - Calcolatrice</title>
 <head>
 <body>
-  <h1>!!!WORK IN PROGRESS!!!</h1>
+  <ul>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
+      <div class="dropdown-content">
+        <a href="comingsoon.html">Percentuale</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Algebra</a>
+      <div class="dropdown-content">
+        <a href="comingsoon.html">Matrice2x2</a>
+        <a href="comingsoon.html">Matrice3x3</a>
+        <a href="comingsoon.html">Cramer2x2</a>
+        <a href="comingsoon.html">Cramer3x3</a>
+        <a href="comingsoon.html">Random</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Fisica</a>
+      <div class="dropdown-content">
+        <a href="comingsoon.html">Equivalenze</a>
+        <a href="comingsoon.html">Forze</a>
+        <a href="comingsoon.html">Momento di una forza</a>
+        <a href="comingsoon.html">Dinamica</a>
+        <a href="comingsoon.html">Convertitore Velocita</a>
+        <a href="comingsoon.html">Massa</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Geometria</a>
+      <div class="dropdown-content">
+        <a href="comingsoon.html">Area Triangolo</a>
+        <a href="comingsoon.html">Cerchio e Circonferenza</a>
+        <a href="comingsoon.html">Area Poligoni Regolari</a>
+        <a href="comingsoon.html">Pitagora</a>
+        <a href="comingsoon.html">Seno, Coseno, Tangente</a>
+        <a href="comingsoon.html">Cubo</a>
+        <a href="comingsoon.html">Parallelepipedo</a>
+        <a href="comingsoon.html">Sfera</a>
+        <a href="comingsoon.html">Piramide</a>
+        <a href="comingsoon.html">Cono</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Home</a>
+      <div class="dropdown-content">
+        <a href="indexRed.html">Rosso</a>
+        <a href="indexBlue.html">Blu</a>
+        <a href="..\index.html">Grigio</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Help</a>
+      <div class="dropdown-content">
+          <a href="about.html" >About</a>
+      </div>
+    </li>
+    
+  </ul>
+
   <form name="potenza">
-    <h1>Potenze</h1>
+    <h1>Potenza</h1>
+
     <p><label><input type="number" id="basePo" required /></label></p>
+      <div class="base">
+      <h3>Base:</h3>
+    </div>
+
     <p><label><input type="number" id="potenza" required /></label></p>
-    <p><button id="calcoloPotenza">Calcola</button>Risultato: <span id="risultatoPotenza"></span></p>
+    <div class="esp">
+      <h3>Esponente:</h3>
+    </div>
+    
+    <button id="calcoloPotenza">Calcola</button>
+    <div class="result">
+      <h2>Risultato: <span id="risultatoPotenza"></span></h2>
+    </div>
+
   </form>
 
   <form name="radice">
+    <br>
+    <br>
     <h1>Radice</h1>
+
     <p><label><input type="number" id="baseRad" required /></label></p>
+    <div class="radicando">
+      <h3>Radicando:</h3>
+    </div>
+
     <p><label><input type="number" id="esponenteRad" required /></label></p>
-    <p><button id="calcoloRadice">Calcola</button>Risultato: <span id="risultatoRadice"></span></p>
+    <div class="radice">
+      <h3>Radice:</h3>
+    </div>
+
+    <button id="calcoloRadice">Calcola</button>
+    <div class="result">
+      <h2>Risultato: <span id="risultatoRadice"></span></h2>
+    </div>
+
   </form>
 
-  
-    
   <script>
     var pot=document.forms.potenza;
     pot.addEventListener("submit", function(e) {
@@ -55,5 +146,6 @@
       e.preventDefault()
     })
   </script>
+
 </body>
 </html>
