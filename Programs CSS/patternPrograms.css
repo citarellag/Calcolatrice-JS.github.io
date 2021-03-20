@@ -163,28 +163,44 @@ input {
 
 .base h3 {
   color: rgb(0, 0, 0);
-  position: fixed;
-  left: 37%;
-  top: 19%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  left: 38%;
+  top: 22%;
 }
 
 .esp h3 {
   color: rgb(0, 0, 0);
-  position: fixed;
-  left: 35%;
-  top: 25%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  left: 37%;
+  top: 28%;
 }
 
 .radicando h3 {
   color: rgb(0, 0, 0);
-  position: fixed;
-  left: 35%;
-  top: 54%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  left: 37%;
+  top: 57%;
 }
 
 .radice h3 {
   color: rgb(0, 0, 0);
-  position: fixed;
-  left: 36%;
-  top: 60%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  left: 38%;
+  top: 63%;
 }
