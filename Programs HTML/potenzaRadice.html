@@ -71,49 +71,25 @@
   </ul>
 
   <form name="potenza">
-    <h1>Potenza</h1>
-
-    <p>
-      <label><input type="number" id="basePo" required /></label>
-      <div class="base">
-        <h3>Base:</h3>
-      </div>
-    </p>
-
-    <p>
-      <label><input type="number" id="potenza" required /></label>
-      <div class="esp">
-        <h3>Esponente:</h3>
-      </div>
-    </p>
-
-    
+    <div class="PotRadTitle">
+      <h1>Potenza</h1>
+    </div>
+    <h3><label><input type="number" id="basePo" required /></label>Base:</h3>
+    <h3><label><input type="number" id="potenza" required /></label>Esponente:</h3>
     <button id="calcoloPotenza">Calcola</button>
     <div class="result">
       <h2>Risultato: <span id="risultatoPotenza"></span></h2>
     </div>
-
   </form>
 
   <form name="radice">
     <br>
     <br>
-    <h1>Radice</h1>
-
-    <p>
-      <label><input type="number" id="baseRad" required /></label>
-      <div class="radicando">
-        <h3>Radicando:</h3>
-      </div>
-    </p>
-
-    <p>
-      <label><input type="number" id="esponenteRad" required /></label>
-      <div class="radice">
-        <h3>Radice:</h3>
-      </div>
-    </p>
-
+    <div class="PotRadTitle">
+      <h1>Radice</h1>
+    </div>
+    <h3><label><input type="number" id="baseRad" required /></label>Radicando:</h3>
+    <h3><label><input type="number" id="esponenteRad" required /></label>Radice:</h3>
     <button id="calcoloRadice">Calcola</button>
     <div class="result">
       <h2>Risultato: <span id="risultatoRadice"></span></h2>
