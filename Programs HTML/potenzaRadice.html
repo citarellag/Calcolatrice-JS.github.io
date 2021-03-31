@@ -70,19 +70,20 @@
     
   </ul>
 
-  <form name="potenza">
+  <form id="potenzaForm">
     <div class="PotRadTitle">
       <h1>Potenza</h1>
     </div>
     <h3><label><input type="number" id="basePo" required /></label>Base:</h3>
     <h3><label><input type="number" id="potenza" required /></label>Esponente:</h3>
     <button id="calcoloPotenza">Calcola</button>
+    <button id="resetPot">canc</button>
     <div class="result">
-      <h2>Risultato: <span id="risultatoPotenza"></span></h2>
+      <h2 id="resPot">Risultato: <span id="risultatoPotenza"></span></h2>
     </div>
   </form>
 
-  <form name="radice">
+  <form id="radiceForm">
     <br>
     <br>
     <div class="PotRadTitle">
@@ -91,26 +92,42 @@
     <h3><label><input type="number" id="baseRad" required /></label>Radicando:</h3>
     <h3><label><input type="number" id="esponenteRad" required /></label>Radice:</h3>
     <button id="calcoloRadice">Calcola</button>
+    <button id="resetRad">canc</button>
     <div class="result">
-      <h2>Risultato: <span id="risultatoRadice"></span></h2>
+      <h2 id="resRad">Risultato: <span id="risultatoRadice"></span></h2>
     </div>
 
   </form>
-
   <script>
-    var pot=document.forms.potenza;
-    pot.addEventListener("submit", function(e) {
+    document.getElementById("calcoloPotenza").addEventListener("click", function(e){
       var baseP = document.getElementById("basePo")
       var esponenteP = document.getElementById("potenza")
-      var totalePotenza = document.getElementById("risultatoPotenza")
-      totalePotenza.innerHTML = (baseP.valueAsNumber ** esponenteP.valueAsNumber)
+      document.getElementById("risultatoPotenza").innerHTML = (baseP.valueAsNumber ** esponenteP.valueAsNumber)
+      e.preventDefault()})
+
+      document.getElementById("resetPot").addEventListener("click", function(e){
+        document.getElementById("potenzaForm").reset();
+        document.getElementById("risultatoPotenza").innerHTML=""
+        e.preventDefault()})
+    
+    document.getElementById("resPot").addEventListener("click", function(e){
+      var copyText = document.getElementById("risultatoPotenza");
+      var textArea = document.createElement("textArea")
+      textArea.value = copyText.textContent.toString()
+      document.body.appendChild(textArea)
+      textArea.select();
+      textArea.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      textArea.remove()
       e.preventDefault()
-      })
+      
+    })
+
+
   </script>
 
   <script>
-    var rad=document.forms.radice;
-    rad.addEventListener("submit", function(e) {
+    document.getElementById("calcoloRadice").addEventListener("click", function(e) {
       var baseR = document.getElementById("baseRad")
       var esponenteR = document.getElementById("esponenteRad")
       var totaleRadice = document.getElementById("risultatoRadice")
@@ -127,6 +144,22 @@
       }
       e.preventDefault()
     })
+
+    document.getElementById("resetRad").addEventListener("click", function(e){
+      document.getElementById("radiceForm").reset()
+      document.getElementById("risultatoRadice").innerHTML=""
+      e.preventDefault()})
+
+    document.getElementById("resRad").addEventListener("click", function(e){
+      var copyText = document.getElementById("risultatoRadice");
+      var textArea = document.createElement("textArea")
+      textArea.value = copyText.textContent.toString()
+      document.body.appendChild(textArea)
+      textArea.select();
+      textArea.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      textArea.remove()
+      e.preventDefault()})
   </script>
 
 </body>
