@@ -9,6 +9,15 @@ body {
   position: relative;
 }
 
+
+.abTitle h1{
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-style: bolder;
+  font-size: 40px;
+}
+
 .left h1 {
   color: rgb(0, 0, 0);
   margin: 0;
@@ -154,7 +163,7 @@ input {
   left: 30%;
 }
 
-.PotRadTitle h1 {
+.TitlePrograms h1 {
   position: relative;
   left: 20%;
   color: white;
