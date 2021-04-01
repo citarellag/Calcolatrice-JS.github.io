@@ -63,7 +63,7 @@ body {
 }
 
 .left a, .right a {
-color: rgb(200, 0, 0);
+  color: rgb(200, 0, 0);
 }
 
 ul {
@@ -170,4 +170,53 @@ input {
   font-family: 'Segoe UI', sans-serif;
   font-style: bolder;
   font-size: 50px;
+}
+
+.result {
+  position: relative;
+  left: 21%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.result .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgb(58, 58, 58);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.result .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(58, 58, 58) transparent transparent transparent
+}
+.result .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+  animation: fadeOut 3s
+
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity:0 ;}
 }
