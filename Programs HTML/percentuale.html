@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Potenze e radici - Calcolatrice</title>
+    <title>Percentuale - Calcolatrice</title>
   <head>
   <body>
 
@@ -71,31 +71,74 @@
       
     </ul>
 
-    <form name="potenza">
+    <form id="percentualeDiretta">
       <div class="TitlePrograms">
         <h1>Esempio: il 30% di 10 è 3.</h1>
       </div>
-      <h3><label><input type="number" id="basePo" required /></label>Percentuale: </h3>
-      <h3><label><input type="number" id="potenza" required /></label>Totale: </h3>
-      <button id="calcoloPotenza">Calcola</button>
+      <h3><label><input type="number" id="valTotDir" placeholder="Valore Totale" required /></label></h3>
+      <h3><label><input type="number" id="valPercDir" placeholder="Valore Percentuale" required /></label></h3>
+      <button id="calcoloPercentualeDir">Calcola</button>
+      <button id="resetDir">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultatoPotenza"></span></h2>
+        <h2 id="resDir">Risultato: <span id="risultatoPercentualeDir"></span></h2>
       </div>
     </form>
 
-    <form name="radice">
+    <form id="percentualeInversa">
       <br>
       <br>
       <div class="TitlePrograms">
         <h1>Esempio: se 7 è il 70% del totale, il totale è 10.</h1>
       </div>
-      <h3><label><input type="number" id="baseRad" required /></label>Parte del totale: </h3>
-      <h3><label><input type="number" id="esponenteRad" required /></label>Percentuale: </h3>
-      <button id="calcoloRadice">Calcola</button>
+      <h3><label><input type="number" id="valtotInv" placeholder="Valore parziale" required /></label></h3>
+      <h3><label><input type="number" id="valPercInv" placeholder="Percentuale" required /></label></h3>
+      <button id="calcoloPercentualeInv">Calcola</button>
+      <button id="resetInv">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultatoRadice"></span></h2>
+        <h2 id="resInv">Risultato: <span id="risultatoPercentualeInv"></span></h2>
       </div>
     </form>
-
+    <script>
+      document.getElementById("calcoloPercentualeDir").addEventListener("click", function(e){
+        var percDir = document.getElementById("valPercDir")
+        var totDir = document.getElementById("valTotDir")
+        document.getElementById("risultatoPercentualeDir").innerHTML = ((percDir.valueAsNumber * totDir.valueAsNumber) / 100)
+        e.preventDefault()})
+      document.getElementById("resetDir").addEventListener("click", function(e){
+        document.getElementById("percentualeDiretta").reset()
+        document.getElementById("risultatoPercentualeDir").innerHTML = ""
+        e.preventDefault()})
+      document.getElementById("resDir").addEventListener("click", function(e){
+        var copyText = document.getElementById("risultatoPercentualeDir");
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+        e.preventDefault()})    
+    </script>
+    <script>
+      document.getElementById("calcoloPercentualeInv").addEventListener("click", function(e){
+        var partInv = document.getElementById("valtotInv")
+        var percInv = document.getElementById("valPercInv")
+        document.getElementById("risultatoPercentualeInv").innerHTML = (partInv.valueAsNumber * 100) / percInv.valueAsNumber
+        e.preventDefault()})
+      document.getElementById("resetInv").addEventListener("click", function(e){
+        document.getElementById("percentualeInversa").reset()
+        document.getElementById("risultatoPercentualeInv").innerHTML = ""
+        e.preventDefault()})
+      document.getElementById("resInv").addEventListener("click", function(e){
+        var copyText = document.getElementById("risultatoPercentualeInv");
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+        e.preventDefault()}) 
+    </script>
   </body>
 </html>
