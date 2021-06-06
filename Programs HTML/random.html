@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
+    <title>Random - Calcolatrice</title>
+  <head>
+  <body>
+
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
+        <div class="dropdown-content">
+          <a href="potenzaRadice.html" >Potenze e Radici</a>
+          <a href="percentuale.html" >Percentuale</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Algebra</a>
+        <div class="dropdown-content">
+          <a href="comingsoon.html">Matrice2x2</a>
+          <a href="comingsoon.html">Matrice3x3</a>
+          <a href="comingsoon.html">Cramer2x2</a>
+          <a href="comingsoon.html">Cramer3x3</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Fisica</a>
+        <div class="dropdown-content">
+          <a href="comingsoon.html">Equivalenze</a>
+          <a href="comingsoon.html">Forze</a>
+          <a href="comingsoon.html">Momento di una forza</a>
+          <a href="comingsoon.html">Dinamica</a>
+          <a href="comingsoon.html">Convertitore Velocita</a>
+          <a href="comingsoon.html">Massa</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Geometria</a>
+        <div class="dropdown-content">
+          <a href="comingsoon.html">Area Triangolo</a>
+          <a href="comingsoon.html">Cerchio e Circonferenza</a>
+          <a href="comingsoon.html">Area Poligoni Regolari</a>
+          <a href="comingsoon.html">Pitagora</a>
+          <a href="comingsoon.html">Seno, Coseno, Tangente</a>
+          <a href="comingsoon.html">Cubo</a>
+          <a href="comingsoon.html">Parallelepipedo</a>
+          <a href="comingsoon.html">Sfera</a>
+          <a href="comingsoon.html">Piramide</a>
+          <a href="comingsoon.html">Cono</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+          <a href="indexRed.html">Rosso</a>
+          <a href="indexBlue.html">Blu</a>
+          <a href="..\index.html">Grigio</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Help</a>
+        <div class="dropdown-content">
+          <a href="about.html" >About</a>
+        </div>
+      </li>
+      
+    </ul>
+
+    <form name="rngForm">
+      <br>
+      <br>
+      <div class="TitlePrograms">
+        <h1>RNG</h1>
+      </div>
+      <h3><label><input type="number" id="0rand" placeholder="Primo numero:" required /></label></h3>
+      <h3><label><input type="number" id="-1rand" placeholder="Ultimo numero:" required /></label></h3>
+      <button id="randomize">Estrai numero</button>
+      <button id="resetRand">Reset</button>
+      <div class="result">
+        <h2>Risultato: <span id="risultatoRand"></span></h2>
+      </div>
+    </form>
+
+    <script>
+      document.getElementById("randomize").addEventListener("click", function(e){
+        var niniziale = document.getElementById("0rand")
+        var nfinale = document.getElementById("-1rand")
+        document.getElementById("risultatoRand").innerHTML = Math.floor((Math.random() * nfinale.valueAsNumber) + niniziale.valueAsNumber)
+        e.preventDefault()})
+
+        document.getElementById("resetRand").addEventListener("click", function(e){
+          document.getElementById("rngForm").reset();
+          document.getElementById("risultatoRand").innerHTML=""
+          e.preventDefault()})
+    </script>
+
+  </body>
+</html>
