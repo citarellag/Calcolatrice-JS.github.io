@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Matrice 2x2 - Calcolatrice</title>
+    <title>Cramer 2x2 - Calcolatrice</title>
   <head>
   <body>
 
@@ -18,8 +18,8 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Algebra</a>
         <div class="dropdown-content">
+          <a href="matrice2x2.html">Matrice2x2</a>
           <a href="matrice3x3.html">Matrice3x3</a>
-          <a href="cramer2x2.html">Cramer2x2</a>
           <a href="comingsoon.html">Cramer3x3</a>
           <a href="random.html">Random</a>
         </div>
@@ -71,19 +71,28 @@
       
     </ul>
 
-    <form name="2x2Form">
+    <form name="C2x2Form">
       <br>
       <br>
       <div class="TitlePrograms">
-        <h1>Matrice 2x2</h1>
+        <h1>Cramer 2x2</h1>
       </div>
-      <h3><label><input type="number" id="0_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="1_2x2" style="width: 90px;height: 90px;" required /></label></h3>
-      <h3><label><input type="number" id="2_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="3_2x2" style="width: 90px;height: 90px;" required /></label></h3>
-      <button id="calc2x2">Calcola</button>
-      <button id="reset2x2">Reset</button>
+      <h3><label><input type="number" id="C0_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C6_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C2_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C3_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C7_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <button id="calcC2x2">Calcola</button>
+      <button id="resetC2x2">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultato2x2"></span></h2>
+        <h2>Risultato: <span id="risultatoC2x2"></span></h2>
       </div>
+
+      <div class="XC2x2">
+        <p>×</p>
+      </div>
+      
+      <div class="UC2x2">
+        <p>=</p>
+      </div>
+
     </form>
 
     <script>

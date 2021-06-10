@@ -220,3 +220,19 @@ input {
   from {opacity: 1;}
   to {opacity:0 ;}
 }
+
+.XC2x2 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 278px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.UC2x2 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 278px;
+  left: 940px;
+  color: rgb(0, 0, 0);
+}
