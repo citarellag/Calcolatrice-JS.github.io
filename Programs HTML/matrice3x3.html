@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Random - Calcolatrice</title>
+    <title>Matrice 3x3 - Calcolatrice</title>
   <head>
   <body>
 
@@ -19,9 +19,9 @@
         <a href="javascript:void(0)" class="dropbtn">Algebra</a>
         <div class="dropdown-content">
           <a href="matrice2x2.html">Matrice2x2</a>
-          <a href="matrice3x3.html">Matrice3x3</a>
           <a href="comingsoon.html">Cramer2x2</a>
           <a href="comingsoon.html">Cramer3x3</a>
+          <a href="random.html">Random</a>
         </div>
       </li>
 
@@ -71,32 +71,24 @@
       
     </ul>
 
-    <form name="rngForm">
+    <form name="3x3Form">
       <br>
       <br>
       <div class="TitlePrograms">
-        <h1>RNG</h1>
+        <h1>Matrice 3x3</h1>
       </div>
-      <h3><label><input type="number" id="0rand" placeholder="Primo numero:" required /></label></h3>
-      <h3><label><input type="number" id="-1rand" placeholder="Ultimo numero:" required /></label></h3>
-      <button id="randomize">Estrai numero</button>
-      <button id="resetRand">Reset</button>
+      <h3><label><input type="number" id="0_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="1_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="2_3x3" style="width: 90px;height: 90px;" required /></label></h3>
+      <h3><label><input type="number" id="3_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="4_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="5_3x3" style="width: 90px;height: 90px;" required /></label></h3>
+      <h3><label><input type="number" id="6_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="7_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="8_3x3" style="width: 90px;height: 90px;" required /></label></h3>
+      <button id="calc3x3">Calcola</button>
+      <button id="reset3x3">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultatoRand"></span></h2>
+        <h2>Risultato: <span id="risultato3x3"></span></h2>
       </div>
     </form>
 
     <script>
-      document.getElementById("randomize").addEventListener("click", function(e){
-        var niniziale = document.getElementById("0rand")
-        var nfinale = document.getElementById("-1rand")
-        document.getElementById("risultatoRand").innerHTML = Math.floor((Math.random() * nfinale.valueAsNumber) + niniziale.valueAsNumber)
-        e.preventDefault()})
-
-        document.getElementById("resetRand").addEventListener("click", function(e){
-          document.getElementById("rngForm").reset();
-          document.getElementById("risultatoRand").innerHTML=""
-          e.preventDefault()})
+      //WIP
     </script>
 
   </body>
