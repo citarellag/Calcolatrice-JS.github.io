@@ -236,3 +236,19 @@ input {
   left: 940px;
   color: rgb(0, 0, 0);
 }
+
+.XC3x3 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 335px;
+  left: 888px;
+  color: rgb(0, 0, 0);
+}
+
+.UC3x3 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 335px;
+  left: 1036px;
+  color: rgb(0, 0, 0);
+}

@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Matrice 3x3 - Calcolatrice</title>
+    <title>Cramer 3x3 - Calcolatrice</title>
   <head>
   <body>
 
@@ -19,8 +19,8 @@
         <a href="javascript:void(0)" class="dropbtn">Algebra</a>
         <div class="dropdown-content">
           <a href="matrice2x2.html">Matrice2x2</a>
+          <a href="matrice3x3.html">Matrice3x3</a>
           <a href="cramer2x2.html">Cramer2x2</a>
-          <a href="cramer3x3.html">Cramer3x3</a>
           <a href="random.html">Random</a>
         </div>
       </li>
@@ -71,20 +71,29 @@
       
     </ul>
 
-    <form name="3x3Form">
+    <form name="C2x2Form">
       <br>
       <br>
       <div class="TitlePrograms">
-        <h1>Matrice 3x3</h1>
+        <h1>Cramer 3x3</h1>
       </div>
-      <h3><label><input type="number" id="0_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="1_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="2_3x3" style="width: 90px;height: 90px;" required /></label></h3>
-      <h3><label><input type="number" id="3_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="4_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="5_3x3" style="width: 90px;height: 90px;" required /></label></h3>
-      <h3><label><input type="number" id="6_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="7_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="8_3x3" style="width: 90px;height: 90px;" required /></label></h3>
-      <button id="calc3x3">Calcola</button>
-      <button id="reset3x3">Reset</button>
+      <h3><label><input type="number" id="C0_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C2_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C9_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C12_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C3_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C10_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C13_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C6_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C7_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C8_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C11_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C14_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <button id="calcC3x3">Calcola</button>
+      <button id="resetC3x3">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultato3x3"></span></h2>
+        <h2>Risultato: <span id="risultatoC3x3"></span></h2>
       </div>
+
+      <div class="XC3x3">
+        <p>×</p>
+      </div>
+      
+      <div class="UC3x3">
+        <p>=</p>
+      </div>
+
     </form>
 
     <script>
