@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>AbDev</title>
+    <title>Cramer 2x2 - Calcolatrice</title>
   <head>
   <body>
 
@@ -10,8 +10,8 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
         <div class="dropdown-content">
-          <a href="percentuale.html">Percentuale</a>
-          <a href="potenzaRadice.html">Potenze e Radici</a>
+          <a href="potenzaRadice.html" >Potenze e Radici</a>
+          <a href="percentuale.html" >Percentuale</a>
         </div>
       </li>
 
@@ -20,7 +20,6 @@
         <div class="dropdown-content">
           <a href="matrice2x2.html">Matrice2x2</a>
           <a href="matrice3x3.html">Matrice3x3</a>
-          <a href="cramer2x2.html">Cramer2x2</a>
           <a href="cramer3x3.html">Cramer3x3</a>
           <a href="random.html">Random</a>
         </div>
@@ -62,33 +61,43 @@
           <a href="..\index.html">Grigio</a>
         </div>
       </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Help</a>
+        <div class="dropdown-content">
+          <a href="about.html" >About</a>
+        </div>
+      </li>
+      
     </ul>
 
-    <div class="abTitle">
-      <h1>About Developers</h1>
-    </div>
-      
-    <div class="left">
-      <h1>Gaetano Citarella:</h1><br>
-      <h2>
-        -Designer <br>
-        -Web front-end <br>
-        -Pages Ideator <br>
-        -IG:  <a href='https://www.instagram.com/citarellagaetano_/' target="_blank">citarellagaetano_</a> <br>
-        -Github: <a href='https://github.com/citarellag' target="_blank">citarellag</a>
-      </h2>
-    </div>
+    <form name="C2x2Form">
+      <br>
+      <br>
+      <div class="TitlePrograms">
+        <h1>Cramer 2x2</h1>
+      </div>
+      <h3><label><input type="number" id="C0_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C6_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C2_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C3_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C7_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <button id="calcC2x2">Calcola</button>
+      <button id="resetC2x2">Reset</button>
+      <div class="result">
+        <h2>Risultato: <span id="risultatoC2x2"></span></h2>
+      </div>
 
-    <div class="right">
-      <h1>Filippo Tondelli:</h1><br>
-      <h2>
-        -Scripter <br>
-        -Web back-end <br>
-        -Bug Fixer <br>
-        -IG: <a href='https://www.instagram.com/filippotondelli/' target="_blank">filippotondelli</a> <br>
-        -Github: <a href='https://github.com/Tond28' target="_blank">Tond28</a>
-      </h2>
-    </div>
+      <div class="XC2x2">
+        <p>×</p>
+      </div>
+      
+      <div class="UC2x2">
+        <p>=</p>
+      </div>
+
+    </form>
+
+    <script>
+      //WIP
+    </script>
 
   </body>
 </html>
