@@ -71,24 +71,59 @@
       
     </ul>
 
-    <form name="3x3Form">
+    <form id="3x3Form">
       <br>
       <br>
       <div class="TitlePrograms">
         <h1>Matrice 3x3</h1>
       </div>
-      <h3><label><input type="number" id="0_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="1_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="2_3x3" style="width: 90px;height: 90px;" required /></label></h3>
-      <h3><label><input type="number" id="3_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="4_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="5_3x3" style="width: 90px;height: 90px;" required /></label></h3>
-      <h3><label><input type="number" id="6_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="7_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="8_3x3" style="width: 90px;height: 90px;" required /></label></h3>
+      <h3><label><input type="number" id="0_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="1_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="2_3x3" style="width: 90px;height: 90px;"  /></label></h3>
+      <h3><label><input type="number" id="3_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="4_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="5_3x3" style="width: 90px;height: 90px;"  /></label></h3>
+      <h3><label><input type="number" id="6_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="7_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="8_3x3" style="width: 90px;height: 90px;"  /></label></h3>
       <button id="calc3x3">Calcola</button>
       <button id="reset3x3">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultato3x3"></span></h2>
+        <h2 id="ris3x3">Risultato: <span id="risultato3x3"></span></h2>
       </div>
     </form>
 
     <script>
-      //WIP
+      document.getElementById("calc3x3").addEventListener("click", function(e){
+        var zeroP = document.getElementById("0_3x3").valueAsNumber
+        var first = document.getElementById("1_3x3").valueAsNumber
+        var second = document.getElementById("2_3x3").valueAsNumber
+        var third = document.getElementById("3_3x3").valueAsNumber
+        var fourth = document.getElementById("4_3x3").valueAsNumber
+        var fifth = document.getElementById("5_3x3").valueAsNumber
+        var sixth = document.getElementById("6_3x3").valueAsNumber
+        var seventh = document.getElementById("7_3x3").valueAsNumber
+        var eight = document.getElementById("8_3x3").valueAsNumber
+        var positivesLines = (zeroP * fourth * eight) + (first * fifth * sixth) + (second * third * seventh)
+        var negativasLines = (second * fourth * sixth) + (first * third * eight) + (zeroP * fifth * seventh)
+        var ris = positivesLines - negativasLines
+        if (isNaN(ris)){
+          ris = "ERRORE, RIPROVA"
+        }
+        document.getElementById("risultato3x3").innerHTML = ris
+        e.preventDefault()
+      })
+    
+    document.getElementById("reset3x3").addEventListener("click", function(e){
+      document.getElementById("3x3Form").reset()
+      document.getElementById("risultato3x3").innerHTML = ""
+      e.preventDefault()
+    })
+    document.getElementById("ris3x3").addEventListener("click", function(e){
+      var copyText = document.getElementById("risultato3x3");
+      var textArea = document.createElement("textArea")
+      textArea.value = copyText.textContent.toString()
+      document.body.appendChild(textArea)
+      textArea.select();
+      textArea.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      textArea.remove()
+      e.preventDefault()
+    })
     </script>
 
   </body>
