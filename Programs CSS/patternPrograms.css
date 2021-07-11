@@ -252,3 +252,103 @@ input {
   left: 1036px;
   color: rgb(0, 0, 0);
 }
+
+.DDU1 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 700px;
+}
+
+.DDU1R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 850px;
+}
+
+.DDU2 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 425px;
+  left: 700px;
+}
+
+.DDU2R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 425px;
+  left: 850px;
+}
+
+.DDU3 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 600px;
+  left: 700px;
+}
+
+.DDU3R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 600px;
+  left: 850px;
+}
+
+
+.UEQ1 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.UEQ2 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 390px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.UEQ3 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 565px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.CALC1 button {
+  top: -70px;
+  left: 400px;
+}
+
+.CALC2 button {
+  top: -70px;
+  left: 400px;
+}
+
+.CALC3 button {
+  top: -70px;
+  left: 400px;
+}
+
+.result .REQ1 h2 {
+  color: rgb(0, 0, 0);
+  top: 230px;
+  left: 950px;
+}
+
+.result .REQ2 h2 {
+  color: rgb(0, 0, 0);
+  top: 400px;
+  left: 950px;
+}
+
+.result .REQ3 h2 {
+  color: rgb(0, 0, 0);
+  top: 575px;
+  left: 950px;
+}
