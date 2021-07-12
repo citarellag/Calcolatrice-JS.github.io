@@ -352,3 +352,60 @@ input {
   top: 575px;
   left: 950px;
 }
+
+.CALC_SIN button {
+  top: 10px;
+  left: 575px;
+}
+
+.CALC_COS button {
+  top: 10px;
+  left: 575px;
+}
+
+.CALC_TAN button {
+  top: 10px;
+  left: 575px;
+}
+
+.result .R_SIN h2 {
+  color: rgb(0, 0, 0);
+  top: 230px;
+  left: 750px;
+}
+
+.result .R_COS h2 {
+  color: rgb(0, 0, 0);
+  top: 400px;
+  left: 750px;
+}
+
+.result .R_TAN h2 {
+  color: rgb(0, 0, 0);
+  top: 575px;
+  left: 750px;
+}
+
+.angle_sin h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 180px;
+  left: 690px;
+}
+
+.angle_cos h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 360px;
+  left: 690px;
+}
+
+.angle_tan h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 540px;
+  left: 690px;
+}

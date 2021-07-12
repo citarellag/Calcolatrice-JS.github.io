@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Cramer 2x2 - Calcolatrice</title>
+    <title>Seno Coseno Tangente - Calcolatrice</title>
   <head>
   <body>
 
@@ -20,21 +20,20 @@
         <div class="dropdown-content">
           <a href="matrice2x2.html">Matrice2x2</a>
           <a href="matrice3x3.html">Matrice3x3</a>
+          <a href="cramer2x2.html">Cramer2x2</a>
           <a href="cramer3x3.html">Cramer3x3</a>
           <a href="random.html">Random</a>
-          <a href="sincostan.html">Seno, Coseno, Tangente</a>
         </div>
       </li>
 
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Fisica</a>
         <div class="dropdown-content">
-          <a href="equivalenze.html">Equivalenze</a>
+          <a href="equivalenze.html" >Equivalenze</a>
           <a href="comingsoon.html">Convertitore Velocita</a>
           <a href="comingsoon.html">Massa</a>
         </div>
       </li>
-
 
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Home</a>
@@ -54,32 +53,64 @@
       
     </ul>
 
-    <form name="C2x2Form">
-      <br>
-      <br>
-      <div class="TitlePrograms">
-        <h1>Cramer 2x2</h1>
-      </div>
-      <h3><label><input type="number" id="C0_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C6_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
-      <h3><label><input type="number" id="C2_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C3_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C7_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
-      <button id="calcC2x2">Calcola</button>
-      <button id="resetC2x2">Reset</button>
-      <div class="result">
-        <h2>Risultato: <span id="risultatoC2x2"></span></h2>
-      </div>
+    <br>
+    <br>
+    <div class="TitlePrograms">
+      <h1>Seno, Coseno, Tangente</h1>
+    </div>
 
-      <div class="XC2x2">
-        <p>×</p>
-      </div>
-      
-      <div class="UC2x2">
-        <p>=</p>
-      </div>
+    <form id="sincostan">
+      <h3>
+        <label><input type="number" id="sin" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_SIN"><button>Calcola Seno</button></div>
 
+        <div class="angle_sin">
+          <h2>°</h2>
+        </div>
+
+        <div class="result">
+          <div class="R_SIN">
+            <h2 id="ris_sin">=<span id="risultato_sin"></span></h2>
+          </div>
+        </div>
+
+      </h3>
+    
+      <h3>
+        <label><input type="number" id="cos" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_COS"><button>Calcola Coseno</button></div>
+
+        <div class="angle_cos">
+          <h2>°</h2>
+        </div>
+
+        <div class="result">
+          <div class="R_COS">
+            <h2 id="ris_cos">=<span id="risultato_cos"></span></h2>
+          </div>
+        </div>
+      </h3>
+
+      <h3>
+        <label><input type="number" id="tan" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_TAN"><button>Calcola Tangente</button></div>
+
+        <div class="angle_tan">
+          <h2>°</h2>
+        </div>
+        
+        <div class="result">
+          <div class="R_TAN">
+            <h2 id="ris_tan">=<span id="risultato_tan"></span></h2>
+          </div>
+        </div>
+
+      </h3>
     </form>
+    
+    <button id="reset_sincostan">Reset</button>
 
     <script>
-      //WIP
     </script>
 
   </body>
