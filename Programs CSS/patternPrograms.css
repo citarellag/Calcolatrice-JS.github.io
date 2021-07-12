@@ -461,3 +461,10 @@ input {
   left: 1030px;
   color: rgb(0, 0, 0);
 }
+
+.DDV select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 227px;
+  left: 1000px;
+}

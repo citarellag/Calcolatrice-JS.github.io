@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Random - Calcolatrice</title>
+    <title>Massa - Calcolatrice</title>
   <head>
   <body>
 
@@ -22,6 +22,7 @@
           <a href="matrice3x3.html">Matrice3x3</a>
           <a href="cramer2x2.html">Cramer2x2</a>
           <a href="cramer3x3.html">Cramer3x3</a>
+          <a href="random.html">Random</a>
           <a href="sincostan.html">Seno, Coseno, Tangente</a>
         </div>
       </li>
@@ -29,9 +30,8 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Fisica</a>
         <div class="dropdown-content">
-          <a href="equivalenze.html">Equivalenze</a>
+          <a href="equivalenze.html" >Equivalenze</a>
           <a href="conv_vel.html">Convertitore Velocita</a>
-          <a href="massa.html">Massa</a>
         </div>
       </li>
 
@@ -53,32 +53,46 @@
       
     </ul>
 
-    <form name="rngForm">
-      <br>
-      <br>
-      <div class="TitlePrograms">
-        <h1>RNG</h1>
-      </div>
-      <h3><label><input type="number" id="0rand" placeholder="Primo numero:" required /></label></h3>
-      <h3><label><input type="number" id="-1rand" placeholder="Ultimo numero:" required /></label></h3>
-      <button id="randomize">Estrai numero</button>
-      <button id="resetRand">Reset</button>
-      <div class="result">
-        <h2>Risultato: <span id="risultatoRand"></span></h2>
-      </div>
+    <br>
+    <br>
+    <div class="TitlePrograms">
+      <h1>Massa</h1>
+    </div>
+
+    <form id="Massa">
+      <h3>
+        <label><input type="number" id="volume" placeholder="Volume" /></label>
+
+        <div class="DDV">
+          <select id="u_misura_m">
+            <option value="" selected="selected">Acqua</option>
+            <option value="" >Acqua Salata</option>
+            <option value="" >Alluminio</option>
+            <option value="" >Argento</option>
+            <option value="" >Aria</option>
+            <option value="" >Carta</option>
+            <option value="" >Diamante</option>
+            <option value="" >Ferro</option>
+            <option value="" >Latte</option>
+            <option value="" >Marmo</option>
+            <option value="" >Mercurio</option>
+            <option value="" >Oro</option>
+            <option value="" >Piombo</option>
+            <option value="" >Platino</option>
+            <option value="" >Stagno</option>
+            <option value="" >Sughero</option>
+          </select>
+        </div>
+      </h3>
     </form>
 
-    <script>
-      document.getElementById("randomize").addEventListener("click", function(e){
-        var niniziale = document.getElementById("0rand")
-        var nfinale = document.getElementById("-1rand")
-        document.getElementById("risultatoRand").innerHTML = Math.floor((Math.random() * nfinale.valueAsNumber) + niniziale.valueAsNumber)
-        e.preventDefault()})
+    <div class="result">
+      <h2 id="ris_m">Risultato: <span id="risultato_m"></span></h2>
+    </div>
+    <button id="calc_m">Calcola</button>
+    <button id="reset_m">Reset</button>
 
-        document.getElementById("resetRand").addEventListener("click", function(e){
-          document.getElementById("rngForm").reset();
-          document.getElementById("risultatoRand").innerHTML=""
-          e.preventDefault()})
+    <script>
     </script>
 
   </body>
