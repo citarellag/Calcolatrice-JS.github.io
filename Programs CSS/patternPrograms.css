@@ -431,3 +431,33 @@ input {
   left: 780px;
   color: rgb(0, 0, 0);
 }
+
+.U_CV p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 890px;
+  color: rgb(0, 0, 0);
+}
+
+.DDMR select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 950px;
+}
+
+.DDTR select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 1050px;
+}
+
+.DIVR p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 1030px;
+  color: rgb(0, 0, 0);
+}

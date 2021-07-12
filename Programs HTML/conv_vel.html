@@ -30,7 +30,7 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Fisica</a>
         <div class="dropdown-content">
-          <a href="Programs HTML\equivalenze.html" >Equivalenze</a>
+          <a href="equivalenze.html" >Equivalenze</a>
           <a href="comingsoon.html">Massa</a>
         </div>
       </li>
@@ -83,23 +83,49 @@
           <select id="u_misura_t">
             <option value="" >y</option>
             <option value="" >d</option>
+            <option value="" >h</option>
+            <option value="" >min</option>
+            <option value="" selected="selected">s</option>
+          </select>
+        </div>
+
+        <div class="U_CV">
+          <p>→</p>
+        </div>
+
+        <div class="DDMR">
+          <select id="u_misura_m">
+            <option value="" selected="selected">Km</option>
+            <option value="" >hm</option>
+            <option value="" >dam</option>
+            <option value="" >m</option>
+            <option value="" >dm</option>
+            <option value="" >cm</option>
+            <option value="" >mm</option>
+          </select>
+        </div>
+
+        <div class="DIVR">
+          <p>/</p>
+        </div>
+
+        <div class="DDTR">
+          <select id="u_misura_t">
+            <option value="" >y</option>
+            <option value="" >d</option>
             <option value="" selected="selected">h</option>
             <option value="" >min</option>
             <option value="" >s</option>
           </select>
         </div>
-
-        <div class="result">
-          <div class="REQ1">
-            <h2 id="ris_eq1">Risultato: <span id="risultato_eq1"></span></h2>
-          </div>
-        </div>
-
       </h3>
     </form>
 
+    <div class="result">
+      <h2 id="ris_cv">Risultato: <span id="risultato_cv"></span></h2>
+    </div>
     <button id="calc_vel">Calcola</button>
-    <button id="reset_eq">Reset</button>
+    <button id="reset_cv">Reset</button>
 
     <script>
     </script>
