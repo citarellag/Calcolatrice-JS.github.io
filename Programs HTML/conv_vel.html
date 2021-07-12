@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Seno Coseno Tangente - Calcolatrice</title>
+    <title>Convertitore Velocità - Calcolatrice</title>
   <head>
   <body>
 
@@ -23,14 +23,14 @@
           <a href="cramer2x2.html">Cramer2x2</a>
           <a href="cramer3x3.html">Cramer3x3</a>
           <a href="random.html">Random</a>
+          <a href="sincostan.html">Seno, Coseno, Tangente</a>
         </div>
       </li>
 
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Fisica</a>
         <div class="dropdown-content">
-          <a href="equivalenze.html" >Equivalenze</a>
-          <a href="conv_vel.html">Convertitore Velocita</a>
+          <a href="Programs HTML\equivalenze.html" >Equivalenze</a>
           <a href="comingsoon.html">Massa</a>
         </div>
       </li>
@@ -56,59 +56,50 @@
     <br>
     <br>
     <div class="TitlePrograms">
-      <h1>Seno, Coseno, Tangente</h1>
+      <h1>Convertitore Velocità</h1>
     </div>
 
-    <form id="sincostan">
+    <form id="Eq">
       <h3>
-        <label><input type="number" id="sin" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_SIN"><button>Calcola Seno</button></div>
+        <label><input type="number" id="1_eq" style="width: 90px;height: 90px;"  /></label>
 
-        <div class="angle_sin">
-          <h2>°</h2>
+        <div class="DDM">
+          <select id="u_misura_m">
+            <option value="" >Km</option>
+            <option value="" >hm</option>
+            <option value="" >dam</option>
+            <option value="" selected="selected">m</option>
+            <option value="" >dm</option>
+            <option value="" >cm</option>
+            <option value="" >mm</option>
+          </select>
+        </div>
+
+        <div class="DIV">
+          <p>/</p>
+        </div>
+
+        <div class="DDT">
+          <select id="u_misura_t">
+            <option value="" >y</option>
+            <option value="" >d</option>
+            <option value="" selected="selected">h</option>
+            <option value="" >min</option>
+            <option value="" >s</option>
+          </select>
         </div>
 
         <div class="result">
-          <div class="R_SIN">
-            <h2 id="ris_sin">=<span id="risultato_sin"></span></h2>
-          </div>
-        </div>
-
-      </h3>
-    
-      <h3>
-        <label><input type="number" id="cos" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_COS"><button>Calcola Coseno</button></div>
-
-        <div class="angle_cos">
-          <h2>°</h2>
-        </div>
-
-        <div class="result">
-          <div class="R_COS">
-            <h2 id="ris_cos">=<span id="risultato_cos"></span></h2>
-          </div>
-        </div>
-      </h3>
-
-      <h3>
-        <label><input type="number" id="tan" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_TAN"><button>Calcola Tangente</button></div>
-
-        <div class="angle_tan">
-          <h2>°</h2>
-        </div>
-        
-        <div class="result">
-          <div class="R_TAN">
-            <h2 id="ris_tan">=<span id="risultato_tan"></span></h2>
+          <div class="REQ1">
+            <h2 id="ris_eq1">Risultato: <span id="risultato_eq1"></span></h2>
           </div>
         </div>
 
       </h3>
     </form>
-    
-    <button id="reset_sincostan">Reset</button>
+
+    <button id="calc_vel">Calcola</button>
+    <button id="reset_eq">Reset</button>
 
     <script>
     </script>

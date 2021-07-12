@@ -409,3 +409,25 @@ input {
   top: 540px;
   left: 690px;
 }
+
+.DDM select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 700px;
+}
+
+.DDT select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 800px;
+}
+
+.DIV p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 780px;
+  color: rgb(0, 0, 0);
+}
