@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
-    <title>Random - Calcolatrice</title>
+    <title>Seno Coseno Tangente - Calcolatrice</title>
   <head>
   <body>
 
@@ -22,14 +22,14 @@
           <a href="matrice3x3.html">Matrice3x3</a>
           <a href="cramer2x2.html">Cramer2x2</a>
           <a href="cramer3x3.html">Cramer3x3</a>
-          <a href="sincostan.html">Seno, Coseno, Tangente</a>
+          <a href="random.html">Random</a>
         </div>
       </li>
 
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Fisica</a>
         <div class="dropdown-content">
-          <a href="equivalenze.html">Equivalenze</a>
+          <a href="equivalenze.html" >Equivalenze</a>
           <a href="conv_vel.html">Convertitore Velocita</a>
           <a href="massa.html">Massa</a>
         </div>
@@ -53,32 +53,64 @@
       
     </ul>
 
-    <form name="rngForm">
-      <br>
-      <br>
-      <div class="TitlePrograms">
-        <h1>RNG</h1>
-      </div>
-      <h3><label><input type="number" id="0rand" placeholder="Primo numero:" required /></label></h3>
-      <h3><label><input type="number" id="-1rand" placeholder="Ultimo numero:" required /></label></h3>
-      <button id="randomize">Estrai numero</button>
-      <button id="resetRand">Reset</button>
-      <div class="result">
-        <h2>Risultato: <span id="risultatoRand"></span></h2>
-      </div>
+    <br>
+    <br>
+    <div class="TitlePrograms">
+      <h1>Seno, Coseno, Tangente</h1>
+    </div>
+
+    <form id="sincostan">
+      <h3>
+        <label><input type="number" id="sin" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_SIN"><button>Calcola Seno</button></div>
+
+        <div class="angle_sin">
+          <h2>°</h2>
+        </div>
+
+        <div class="result">
+          <div class="R_SIN">
+            <h2 id="ris_sin">=<span id="risultato_sin"></span></h2>
+          </div>
+        </div>
+
+      </h3>
+    
+      <h3>
+        <label><input type="number" id="cos" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_COS"><button>Calcola Coseno</button></div>
+
+        <div class="angle_cos">
+          <h2>°</h2>
+        </div>
+
+        <div class="result">
+          <div class="R_COS">
+            <h2 id="ris_cos">=<span id="risultato_cos"></span></h2>
+          </div>
+        </div>
+      </h3>
+
+      <h3>
+        <label><input type="number" id="tan" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC_TAN"><button>Calcola Tangente</button></div>
+
+        <div class="angle_tan">
+          <h2>°</h2>
+        </div>
+        
+        <div class="result">
+          <div class="R_TAN">
+            <h2 id="ris_tan">=<span id="risultato_tan"></span></h2>
+          </div>
+        </div>
+
+      </h3>
     </form>
+    
+    <button id="reset_sincostan">Reset</button>
 
     <script>
-      document.getElementById("randomize").addEventListener("click", function(e){
-        var niniziale = document.getElementById("0rand")
-        var nfinale = document.getElementById("-1rand")
-        document.getElementById("risultatoRand").innerHTML = Math.floor((Math.random() * nfinale.valueAsNumber) + niniziale.valueAsNumber)
-        e.preventDefault()})
-
-        document.getElementById("resetRand").addEventListener("click", function(e){
-          document.getElementById("rngForm").reset();
-          document.getElementById("risultatoRand").innerHTML=""
-          e.preventDefault()})
     </script>
 
   </body>

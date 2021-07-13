@@ -252,3 +252,219 @@ input {
   left: 1036px;
   color: rgb(0, 0, 0);
 }
+
+.DDU1 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 700px;
+}
+
+.DDU1R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 850px;
+}
+
+.DDU2 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 425px;
+  left: 700px;
+}
+
+.DDU2R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 425px;
+  left: 850px;
+}
+
+.DDU3 select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 600px;
+  left: 700px;
+}
+
+.DDU3R select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 600px;
+  left: 850px;
+}
+
+
+.UEQ1 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.UEQ2 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 390px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.UEQ3 p {
+  position: fixed;
+  font-size: 2rem;
+  top: 565px;
+  left: 790px;
+  color: rgb(0, 0, 0);
+}
+
+.CALC1 button {
+  top: -70px;
+  left: 400px;
+}
+
+.CALC2 button {
+  top: -70px;
+  left: 400px;
+}
+
+.CALC3 button {
+  top: -70px;
+  left: 400px;
+}
+
+.result .REQ1 h2 {
+  color: rgb(0, 0, 0);
+  top: 230px;
+  left: 950px;
+}
+
+.result .REQ2 h2 {
+  color: rgb(0, 0, 0);
+  top: 400px;
+  left: 950px;
+}
+
+.result .REQ3 h2 {
+  color: rgb(0, 0, 0);
+  top: 575px;
+  left: 950px;
+}
+
+.CALC_SIN button {
+  top: 10px;
+  left: 575px;
+}
+
+.CALC_COS button {
+  top: 10px;
+  left: 575px;
+}
+
+.CALC_TAN button {
+  top: 10px;
+  left: 575px;
+}
+
+.result .R_SIN h2 {
+  color: rgb(0, 0, 0);
+  top: 230px;
+  left: 750px;
+}
+
+.result .R_COS h2 {
+  color: rgb(0, 0, 0);
+  top: 400px;
+  left: 750px;
+}
+
+.result .R_TAN h2 {
+  color: rgb(0, 0, 0);
+  top: 575px;
+  left: 750px;
+}
+
+.angle_sin h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 180px;
+  left: 690px;
+}
+
+.angle_cos h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 360px;
+  left: 690px;
+}
+
+.angle_tan h2 {
+  position: fixed;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  top: 540px;
+  left: 690px;
+}
+
+.DDM select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 700px;
+}
+
+.DDT select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 800px;
+}
+
+.DIV p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 780px;
+  color: rgb(0, 0, 0);
+}
+
+.U_CV p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 890px;
+  color: rgb(0, 0, 0);
+}
+
+.DDMR select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 950px;
+}
+
+.DDTR select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 255px;
+  left: 1050px;
+}
+
+.DIVR p {
+  position: fixed;
+  font-size: 2rem;
+  top: 220px;
+  left: 1030px;
+  color: rgb(0, 0, 0);
+}
+
+.DDV select {
+  position: fixed;
+  font-size: 1.5rem;
+  top: 227px;
+  left: 1000px;
+}

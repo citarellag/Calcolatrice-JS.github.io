@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
+    <title>Convertitore Velocità - Calcolatrice</title>
+  <head>
+  <body>
+
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
+        <div class="dropdown-content">
+          <a href="potenzaRadice.html" >Potenze e Radici</a>
+          <a href="percentuale.html" >Percentuale</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Algebra</a>
+        <div class="dropdown-content">
+          <a href="matrice2x2.html">Matrice2x2</a>
+          <a href="matrice3x3.html">Matrice3x3</a>
+          <a href="cramer2x2.html">Cramer2x2</a>
+          <a href="cramer3x3.html">Cramer3x3</a>
+          <a href="random.html">Random</a>
+          <a href="sincostan.html">Seno, Coseno, Tangente</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Fisica</a>
+        <div class="dropdown-content">
+          <a href="equivalenze.html" >Equivalenze</a>
+          <a href="massa.html">Massa</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+          <a href="indexRed.html">Rosso</a>
+          <a href="indexBlue.html">Blu</a>
+          <a href="..\index.html">Grigio</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Help</a>
+        <div class="dropdown-content">
+          <a href="about.html" >About</a>
+        </div>
+      </li>
+      
+    </ul>
+
+    <br>
+    <br>
+    <div class="TitlePrograms">
+      <h1>Convertitore Velocità</h1>
+    </div>
+
+    <form id="Eq">
+      <h3>
+        <label><input type="number" id="1_eq" style="width: 90px;height: 90px;"  /></label>
+
+        <div class="DDM">
+          <select id="u_misura_m">
+            <option value="" >Km</option>
+            <option value="" >hm</option>
+            <option value="" >dam</option>
+            <option value="" selected="selected">m</option>
+            <option value="" >dm</option>
+            <option value="" >cm</option>
+            <option value="" >mm</option>
+          </select>
+        </div>
+
+        <div class="DIV">
+          <p>/</p>
+        </div>
+
+        <div class="DDT">
+          <select id="u_misura_t">
+            <option value="" >y</option>
+            <option value="" >d</option>
+            <option value="" >h</option>
+            <option value="" >min</option>
+            <option value="" selected="selected">s</option>
+          </select>
+        </div>
+
+        <div class="U_CV">
+          <p>→</p>
+        </div>
+
+        <div class="DDMR">
+          <select id="u_misura_m">
+            <option value="" selected="selected">Km</option>
+            <option value="" >hm</option>
+            <option value="" >dam</option>
+            <option value="" >m</option>
+            <option value="" >dm</option>
+            <option value="" >cm</option>
+            <option value="" >mm</option>
+          </select>
+        </div>
+
+        <div class="DIVR">
+          <p>/</p>
+        </div>
+
+        <div class="DDTR">
+          <select id="u_misura_t">
+            <option value="" >y</option>
+            <option value="" >d</option>
+            <option value="" selected="selected">h</option>
+            <option value="" >min</option>
+            <option value="" >s</option>
+          </select>
+        </div>
+      </h3>
+    </form>
+
+    <div class="result">
+      <h2 id="ris_cv">Risultato: <span id="risultato_cv"></span></h2>
+    </div>
+    <button id="calc_vel">Calcola</button>
+    <button id="reset_cv">Reset</button>
+
+    <script>
+    </script>
+
+  </body>
+</html>

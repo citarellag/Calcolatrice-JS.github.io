@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link href="..\Programs CSS\patternPrograms.css" rel="stylesheet">
+    <title>Equivalenze - Calcolatrice</title>
+  <head>
+  <body>
+
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Matematica di base</a>
+        <div class="dropdown-content">
+          <a href="potenzaRadice.html" >Potenze e Radici</a>
+          <a href="percentuale.html" >Percentuale</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Algebra</a>
+        <div class="dropdown-content">
+          <a href="matrice2x2.html">Matrice2x2</a>
+          <a href="matrice3x3.html">Matrice3x3</a>
+          <a href="cramer2x2.html">Cramer2x2</a>
+          <a href="cramer3x3.html">Cramer3x3</a>
+          <a href="random.html">Random</a>
+          <a href="sincostan.html">Seno, Coseno, Tangente</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Fisica</a>
+        <div class="dropdown-content">
+          <a href="conv_vel.html">Convertitore Velocita</a>
+          <a href="massa.html">Massa</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+          <a href="indexRed.html">Rosso</a>
+          <a href="indexBlue.html">Blu</a>
+          <a href="..\index.html">Grigio</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Help</a>
+        <div class="dropdown-content">
+          <a href="about.html" >About</a>
+        </div>
+      </li>
+      
+    </ul>
+
+    <br>
+    <br>
+    <div class="TitlePrograms">
+      <h1>Equivalenze</h1>
+    </div>
+
+    <form id="Eq">
+      <h3>
+        <label><input type="number" id="1_eq" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC1"><button>Calcola</button></div>
+
+        <div class="DDU1">
+          <select id="u_misura">
+            <option value="" >E</option>
+            <option value="" >P</option>
+            <option value="" >T</option>
+            <option value="" >G</option>
+            <option value="" >M</option>
+            <option value="" >K</option>
+            <option value="" >h</option>
+            <option value="" >da</option>
+            <option value="" selected="selected">u</option>
+            <option value="" >d</option>
+            <option value="" >c</option>
+            <option value="" >m</option>
+            <option value="" >µ</option>
+            <option value="" >n</option>
+            <option value="" >p</option>
+            <option value="" >f</option>
+            <option value="" >a</option>
+          </select>
+        </div>
+
+        <div class="UEQ1">
+          <p>→</p>
+        </div>
+
+        <div class="DDU1R">
+          <select id="u_misura_r">
+            <option value="" >E</option>
+            <option value="" >P</option>
+            <option value="" >T</option>
+            <option value="" >G</option>
+            <option value="" >M</option>
+            <option value="" >K</option>
+            <option value="" >h</option>
+            <option value="" >da</option>
+            <option value="" selected="selected">u</option>
+            <option value="" >d</option>
+            <option value="" >c</option>
+            <option value="" >m</option>
+            <option value="" >µ</option>
+            <option value="" >n</option>
+            <option value="" >p</option>
+            <option value="" >f</option>
+            <option value="" >a</option>
+          </select>
+        </div>
+
+        <div class="result">
+          <div class="REQ1">
+            <h2 id="ris_eq1">Risultato: <span id="risultato_eq1"></span></h2>
+          </div>
+        </div>
+
+      </h3>
+    
+      <h3>
+        <label><input type="number" id="2_eq" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC2"><button>Calcola</button></div>
+
+        <div class="DDU2">
+          <select id="u_misura2">
+            <option value="" >E²</option>
+            <option value="" >P²</option>
+            <option value="" >T²</option>
+            <option value="" >G²</option>
+            <option value="" >M²</option>
+            <option value="" >K²</option>
+            <option value="" >h²</option>
+            <option value="" >da²</option>
+            <option value="" selected="selected">u²</option>
+            <option value="" >d²</option>
+            <option value="" >c²</option>
+            <option value="" >m²</option>
+            <option value="" >µ²</option>
+            <option value="" >n²</option>
+            <option value="" >p²</option>
+            <option value="" >f²</option>
+            <option value="" >a²</option>
+          </select>
+        </div>
+
+        <div class="UEQ2">
+          <p>→</p>
+        </div>
+
+        <div class="DDU2R">
+          <select id="u_misura2_r">
+            <option value="" >E²</option>
+            <option value="" >P²</option>
+            <option value="" >T²</option>
+            <option value="" >G²</option>
+            <option value="" >M²</option>
+            <option value="" >K²</option>
+            <option value="" >h²</option>
+            <option value="" >da²</option>
+            <option value="" selected="selected">u²</option>
+            <option value="" >d²</option>
+            <option value="" >c²</option>
+            <option value="" >m²</option>
+            <option value="" >µ²</option>
+            <option value="" >n²</option>
+            <option value="" >p²</option>
+            <option value="" >f²</option>
+            <option value="" >a²</option>
+          </select>
+        </div>
+
+        <div class="result">
+          <div class="REQ2">
+            <h2 id="ris_eq2">Risultato: <span id="risultato_eq2"></span></h2>
+          </div>
+        </div>
+      </h3>
+
+      <h3>
+        <label><input type="number" id="3_eq" style="width: 90px;height: 90px;"  /></label>
+        <div class="CALC3"><button>Calcola</button></div>
+
+        <div class="DDU3">
+          <select id="u_misura">
+            <option value="" >E³</option>
+            <option value="" >P³</option>
+            <option value="" >T³</option>
+            <option value="" >G³</option>
+            <option value="" >M³</option>
+            <option value="" >K³</option>
+            <option value="" >h³</option>
+            <option value="" >da³</option>
+            <option value="" selected="selected">u³</option>
+            <option value="" >d³</option>
+            <option value="" >c³</option>
+            <option value="" >m³</option>
+            <option value="" >µ³</option>
+            <option value="" >n³</option>
+            <option value="" >p³</option>
+            <option value="" >f³</option>
+            <option value="" >a³</option>
+          </select>
+        </div>
+
+        <div class="UEQ3">
+          <p>→</p>
+        </div>
+
+        <div class="DDU3R">
+          <select id="u_misura_r">
+            <option value="" >E³</option>
+            <option value="" >P³</option>
+            <option value="" >T³</option>
+            <option value="" >G³</option>
+            <option value="" >M³</option>
+            <option value="" >K³</option>
+            <option value="" >h³</option>
+            <option value="" >da³</option>
+            <option value="" selected="selected">u³</option>
+            <option value="" >d³</option>
+            <option value="" >c³</option>
+            <option value="" >m³</option>
+            <option value="" >µ³</option>
+            <option value="" >n³</option>
+            <option value="" >p³</option>
+            <option value="" >f³</option>
+            <option value="" >a³</option>
+          </select>
+        </div>
+
+        <div class="result">
+          <div class="REQ3">
+            <h2 id="ris_eq3">Risultato: <span id="risultato_eq3"></span></h2>
+          </div>
+        </div>
+
+      </h3>
+    </form>
+    
+    <button id="reset_eq">Reset</button>
+
+    <script>
+    </script>
+
+  </body>
+</html>
