@@ -54,18 +54,20 @@
       
     </ul>
 
-    <form name="C2x2Form">
+    <form id="C2x2Form">
       <br>
       <br>
       <div class="TitlePrograms">
         <h1>Cramer 2x2</h1>
       </div>
-      <h3><label><input type="number" id="C0_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C6_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
-      <h3><label><input type="number" id="C2_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C3_2x2" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_2x2" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C7_2x2" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C0_2x2" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C1_2x2" style="width: 90px;height: 90px;"  /></label> <label><input type="text" maxlength="3" id="C4_2x2" style="width: 90px;height: 90px;left: 620px;"  /></label> <label><input type="number" id="C6_2x2" style="width: 90px;height: 90px;left: 670px;"  /></label></h3>
+      <h3><label><input type="number" id="C2_2x2" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C3_2x2" style="width: 90px;height: 90px;"  /></label> <label><input type="text" maxlength="3" id="C5_2x2" style="width: 90px;height: 90px;left: 620px;"  /></label> <label><input type="number" id="C7_2x2" style="width: 90px;height: 90px;left: 670px;"  /></label></h3>
       <button id="calcC2x2">Calcola</button>
       <button id="resetC2x2">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultatoC2x2"></span></h2>
+        <h2 id="zeroRis"><span id="zeroUnknownR">Prima Incognita = </span></h2>
+        <h2 id="firstRis"><span id="firstUnknownR">Seconda Incognita = </span></h2>
+        
       </div>
 
       <div class="XC2x2">
@@ -79,7 +81,58 @@
     </form>
 
     <script>
-      //WIP
+      document.getElementById("calcC2x2").addEventListener("click", function(e){
+      var zeroNum = document.getElementById("C0_2x2").valueAsNumber
+      var firstNum = document.getElementById("C1_2x2").valueAsNumber
+      var secondNum = document.getElementById("C2_2x2").valueAsNumber
+      var thirdNum = document.getElementById("C3_2x2").valueAsNumber
+      var zeroUnknown = document.getElementById("C4_2x2").value
+      var firstUnknown  = document.getElementById("C5_2x2").value
+      var zeroKnown = document.getElementById("C6_2x2").valueAsNumber
+      var firstKnown = document.getElementById("C7_2x2").valueAsNumber
+      var ris = (zeroNum * thirdNum) - (firstNum * secondNum)
+      if (isNaN(ris)){
+        ris = "ERRORE, RIPROVA"
+      } else {
+        if (ris == 0){
+          if (zeroNum / secondNum != zeroKnown / firstKnown){
+            document.getElementById("zeroUnknownR").innerHTML = "SISTEMA IMPOSSIBILE"
+            document.getElementById("firstUnknownR").innerHTML = ""
+          } else {
+            document.getElementById("zeroUnknownR").innerHTML = "SISTEMA INDETERMINATO"
+            document.getElementById("firstUnknownR").innerHTML = ""
+          }
+        } else {
+          var zeroDet = ((zeroKnown * thirdNum) - (firstNum * firstKnown)) / ris
+          var firstDet = ((zeroNum * firstKnown) - (zeroKnown * secondNum)) / ris
+          document.getElementById("zeroUnknownR").innerHTML = zeroUnknown + " = " + zeroDet
+          document.getElementById("firstUnknownR").innerHTML = firstUnknown + " = " + firstDet
+        }
+      }
+      e.preventDefault()
+    })
+
+    document.getElementById("resetC2x2").addEventListener("click", function(e){
+      document.getElementById("C2x2Form").reset()
+      document.getElementById("zeroUnknownR").innerHTML = "Prima incognita"
+      document.getElementById("firstUnknownR").innerHTML = "Seconda Incognita"
+      e.preventDefault()
+    })
+
+    function copyToClipboard(e){
+      var copyText = document.getElementById("zeroUnknownR").textContent + " ||| " + document.getElementById("firstUnknownR").textContent
+      console.log(copyText)
+      var textArea = document.createElement("textArea")
+      textArea.value = copyText.toString()
+      document.body.appendChild(textArea)
+      textArea.select();
+      textArea.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      textArea.remove()
+      e.preventDefault()
+    }
+    document.getElementById("zeroRis").addEventListener("click", copyToClipboard)
+    document.getElementById("firstRis").addEventListener("click", copyToClipboard)
     </script>
 
   </body>

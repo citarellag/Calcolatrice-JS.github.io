@@ -18,9 +18,9 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Algebra</a>
         <div class="dropdown-content">
-          <a href="matrice2x2.html">Matrice2x2</a>
           <a href="matrice3x3.html">Matrice3x3</a>
-          <a href="cramer2x2.html">Cramer2x2</a>
+          <a href="matrice3x3.html">Matrice3x3</a>
+          <a href="cramer3x3.html">Cramer3x3</a>
           <a href="random.html">Random</a>
           <a href="sincostan.html">Seno, Coseno, Tangente</a>
         </div>
@@ -53,19 +53,21 @@
       
     </ul>
 
-    <form name="C3x3Form">
+    <form id="C3x3Form">
       <br>
       <br>
       <div class="TitlePrograms">
         <h1>Cramer 3x3</h1>
       </div>
-      <h3><label><input type="number" id="C0_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C1_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C2_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C9_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C12_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
-      <h3><label><input type="number" id="C3_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C4_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C5_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C10_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C13_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
-      <h3><label><input type="number" id="C6_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C7_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C8_3x3" style="width: 90px;height: 90px;" required /></label> <label><input type="number" id="C11_3x3" style="width: 90px;height: 90px;left: 620px;" required /></label> <label><input type="number" id="C14_3x3" style="width: 90px;height: 90px;left: 670px;" required /></label></h3>
+      <h3><label><input type="number" id="C0_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C1_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C2_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="text" id="C9_3x3" style="width: 90px;height: 90px;left: 620px;"  /></label> <label><input type="number" id="C12_3x3" style="width: 90px;height: 90px;left: 670px;"  /></label></h3>
+      <h3><label><input type="number" id="C3_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C4_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C5_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="text" id="C10_3x3" style="width: 90px;height: 90px;left: 620px;"  /></label> <label><input type="number" id="C13_3x3" style="width: 90px;height: 90px;left: 670px;"  /></label></h3>
+      <h3><label><input type="number" id="C6_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C7_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="number" id="C8_3x3" style="width: 90px;height: 90px;"  /></label> <label><input type="text" id="C11_3x3" style="width: 90px;height: 90px;left: 620px;"  /></label> <label><input type="number" id="C14_3x3" style="width: 90px;height: 90px;left: 670px;"  /></label></h3>
       <button id="calcC3x3">Calcola</button>
       <button id="resetC3x3">Reset</button>
       <div class="result">
-        <h2>Risultato: <span id="risultatoC3x3"></span></h2>
+        <h2 id="zeroRis"><span id="zeroUnknownR">Prima Incognita = </span></h2>
+        <h2 id="firstRis"><span id="firstUnknownR">Seconda Incognita = </span></h2>
+        <h2 id="secondRis"><span id="secondUnknownR">Terza Incognita = </span></h2>
       </div>
 
       <div class="XC3x3">
@@ -79,7 +81,63 @@
     </form>
 
     <script>
-      //WIP
+        document.getElementById("calcC3x3").addEventListener("click", function(e){
+        var zeroP = document.getElementById("C0_3x3").valueAsNumber
+        var first = document.getElementById("C1_3x3").valueAsNumber
+        var second = document.getElementById("C2_3x3").valueAsNumber
+        var third = document.getElementById("C3_3x3").valueAsNumber
+        var fourth = document.getElementById("C4_3x3").valueAsNumber
+        var fifth = document.getElementById("C5_3x3").valueAsNumber
+        var sixth = document.getElementById("C6_3x3").valueAsNumber
+        var seventh = document.getElementById("C7_3x3").valueAsNumber
+        var eight = document.getElementById("C8_3x3").valueAsNumber
+        var zeroUnknown = document.getElementById("C9_3x3").value
+        var firstUnknown  = document.getElementById("C10_3x3").value
+        var secondUnknown  = document.getElementById("C11_3x3").value
+        var zeroKnown = document.getElementById("C12_3x3").valueAsNumber
+        var firstKnown = document.getElementById("C13_3x3").valueAsNumber
+        var secondKnown = document.getElementById("C14_3x3").valueAsNumber
+        var positivesLines = (zeroP * fourth * eight) + (first * fifth * sixth) + (second * third * seventh)
+        var negativasLines = (second * fourth * sixth) + (first * third * eight) + (zeroP * fifth * seventh)
+        var ris = positivesLines - negativasLines
+        if (isNaN(ris)){
+          ris = "ERRORE, RIPROVA"
+        } else {
+          //Calcolo delle incognite
+          var zeroDet = (((zeroKnown * fourth * eight) + (first * fifth * secondKnown) + (second * firstKnown * seventh)) - ((second * fourth * secondKnown) + (first * firstKnown * eight) + (zeroKnown * fifth * seventh))) / ris
+          var firstDet = (((zeroP * firstKnown * eight) + (zeroKnown * fifth * sixth) + (second * third * secondKnown)) - ((second * firstKnown * sixth) + (zeroKnown * third * eight) + (zeroP * fifth * secondKnown))) / ris
+          var secondDet = (((zeroP * fourth * secondKnown) + (first * firstKnown * sixth) + (zeroKnown * third * seventh)) - ((zeroKnown * fourth * sixth) + (first * third * secondKnown) + (zeroP * firstKnown * seventh))) / ris
+          document.getElementById("zeroUnknownR").innerHTML = zeroUnknown + " = " + zeroDet
+          document.getElementById("firstUnknownR").innerHTML = firstUnknown + " = " + firstDet
+          document.getElementById("secondUnknownR").innerHTML = secondUnknown + " = " + secondDet
+        }
+        e.preventDefault()
+      })
+
+      document.getElementById("resetC3x3").addEventListener("click", function(e){
+      document.getElementById("C3x3Form").reset()
+      document.getElementById("zeroUnknownR").innerHTML = "Prima incognita"
+      document.getElementById("firstUnknownR").innerHTML = "Seconda Incognita"
+      document.getElementById("secondUnknownR").innerHTML = "Terza Incognita"
+      e.preventDefault()
+      })
+
+
+      function copyToClipboard(e){
+      var copyText = document.getElementById("zeroUnknownR").textContent + " ||| " + document.getElementById("firstUnknownR").textContent + "|||" + document.getElementById("secondUnknownR").textContent
+      //console.log(copyText)
+      var textArea = document.createElement("textArea")
+      textArea.value = copyText.toString()
+      document.body.appendChild(textArea)
+      textArea.select();
+      textArea.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      textArea.remove()
+      e.preventDefault()
+    }
+    document.getElementById("zeroRis").addEventListener("click", copyToClipboard)
+    document.getElementById("firstRis").addEventListener("click", copyToClipboard)
+    document.getElementById("secondRis").addEventListener("click", copyToClipboard)
     </script>
 
   </body>
