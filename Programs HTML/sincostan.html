@@ -62,7 +62,7 @@
     <form id="sincostan">
       <h3>
         <label><input type="number" id="sin" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_SIN"><button>Calcola Seno</button></div>
+        <div class="CALC_SIN"><button id=calcSin>Calcola Seno</button></div>
 
         <div class="angle_sin">
           <h2>°</h2>
@@ -78,7 +78,7 @@
     
       <h3>
         <label><input type="number" id="cos" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_COS"><button>Calcola Coseno</button></div>
+        <div class="CALC_COS"><button id="calcCos">Calcola Coseno</button></div>
 
         <div class="angle_cos">
           <h2>°</h2>
@@ -93,7 +93,7 @@
 
       <h3>
         <label><input type="number" id="tan" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC_TAN"><button>Calcola Tangente</button></div>
+        <div class="CALC_TAN"><button id="calcTan">Calcola Tangente</button></div>
 
         <div class="angle_tan">
           <h2>°</h2>
@@ -117,6 +117,52 @@
       function toDegrees (angle) {
         return angle * (180 / Math.PI)
       }
+      function copyToClipboard(id){
+        var copyText = document.getElementById(id);
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+      }
+
+      document.getElementById("calcSin").addEventListener("click", function(e){
+        var rad = toRadians(document.getElementById("sin").valueAsNumber)
+        document.getElementById("risultato_sin").innerHTML = Math.sin(rad)
+        e.preventDefault()
+      })
+      document.getElementById("ris_sin").addEventListener("click", function(e){
+        copyToClipboard("risultato_sin")
+      })
+
+
+      document.getElementById("calcCos").addEventListener("click", function(e){
+        var rad = toRadians(document.getElementById("cos").valueAsNumber)
+        document.getElementById("risultato_cos").innerHTML = Math.cos(rad)
+        e.preventDefault()
+      })
+      document.getElementById("ris_cos").addEventListener("click", function(e){
+        copyToClipboard("risultato_cos")
+      })
+
+      document.getElementById("calcTan").addEventListener("click", function(e){
+        var rad = toRadians(document.getElementById("tan").valueAsNumber)
+        document.getElementById("risultato_tan").innerHTML = Math.tan(rad)
+        e.preventDefault()
+      })
+      document.getElementById("ris_tan").addEventListener("click", function(e){
+        copyToClipboard("risultato_tan")
+      })
+
+      document.getElementById("reset_sincostan").addEventListener("click", function(e){
+        document.getElementById("sincostan").reset()
+        document.getElementById("risultato_sin").innerHTML = ""
+        document.getElementById("risultato_cos").innerHTML = ""
+        document.getElementById("risultato_tan").innerHTML = ""
+        e.preventDefault()
+      })
     </script>
 
   </body>
