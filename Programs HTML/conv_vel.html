@@ -59,9 +59,9 @@
       <h1>Convertitore Velocità</h1>
     </div>
 
-    <form id="Eq">
+    <form id="cv">
       <h3>
-        <label><input type="number" id="1_eq" style="width: 90px;height: 90px;"  /></label>
+        <label><input type="number" id="val" style="width: 90px;height: 90px;"  /></label>
 
         <div class="DDM">
           <select id="u_misura_m">
@@ -94,7 +94,7 @@
         </div>
 
         <div class="DDMR">
-          <select id="u_misura_m">
+          <select id="u_misura2_m">
             <option value="" selected="selected">Km</option>
             <option value="" >hm</option>
             <option value="" >dam</option>
@@ -110,7 +110,7 @@
         </div>
 
         <div class="DDTR">
-          <select id="u_misura_t">
+          <select id="u_misura2_t">
             <option value="" >y</option>
             <option value="" >d</option>
             <option value="" selected="selected">h</option>
@@ -128,6 +128,53 @@
     <button id="reset_cv">Reset</button>
 
     <script>
+      var timeValue = {
+        "y" : 1*60*60*24*365,
+        "d" : 1*60*60*24,
+        "h" : 1*60*60,
+        "min" : 1*60,
+        "s" : 1
+      }
+      var distanceValue = {
+        "Km" : 10**3,
+        "hm" : 10**2,
+        "dam" : 10,
+        "m" : 1,
+        "dm" : 10**(-1),
+        "cm" : 10**(-2),
+        "mm" : 10**(-3)
+      }
+
+      function copyToClipboard(id){
+        var copyText = document.getElementById(id);
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+      }
+
+      document.getElementById("calc_vel").addEventListener("click", function(e){
+        var intValue = document.getElementById("val").valueAsNumber
+        var firstSelectMeter = document.getElementById("u_misura_m").options[document.getElementById("u_misura_m").selectedIndex].text
+        var firstSelectTime = document.getElementById("u_misura_t").options[document.getElementById("u_misura_t").selectedIndex].text
+        var secondSelectMeter = document.getElementById("u_misura2_m").options[document.getElementById("u_misura2_m").selectedIndex].text
+        var secondSelectTime = document.getElementById("u_misura2_t").options[document.getElementById("u_misura2_t").selectedIndex].text
+        var outValue = ((intValue * distanceValue[firstSelectMeter]) / distanceValue[secondSelectMeter]) / (timeValue[firstSelectTime] / timeValue[secondSelectTime])
+        document.getElementById("risultato_cv").innerHTML = outValue
+        e.preventDefault()
+      })
+      
+      document.getElementById("ris_cv").addEventListener("click", function(e){
+        copyToClipboard("risultato_cv")
+      })
+
+      document.getElementById("reset_cv").addEventListener("click", function(e){
+        document.getElementById("cv").reset()
+        document.getElementById("risultato_cv").innerHTML = ""
+      })
     </script>
 
   </body>

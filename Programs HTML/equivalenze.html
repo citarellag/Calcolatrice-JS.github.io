@@ -62,7 +62,7 @@
     <form id="Eq">
       <h3>
         <label><input type="number" id="1_eq" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC1"><button>Calcola</button></div>
+        <div class="CALC1"><button id=clc1>Calcola</button></div>
 
         <div class="DDU1">
           <select id="u_misura">
@@ -122,7 +122,7 @@
     
       <h3>
         <label><input type="number" id="2_eq" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC2"><button>Calcola</button></div>
+        <div class="CALC2"><button id="clc2">Calcola</button></div>
 
         <div class="DDU2">
           <select id="u_misura2">
@@ -181,10 +181,10 @@
 
       <h3>
         <label><input type="number" id="3_eq" style="width: 90px;height: 90px;"  /></label>
-        <div class="CALC3"><button>Calcola</button></div>
+        <div class="CALC3"><button id="clc3">Calcola</button></div>
 
         <div class="DDU3">
-          <select id="u_misura">
+          <select id="u_misura3">
             <option value="" >E³</option>
             <option value="" >P³</option>
             <option value="" >T³</option>
@@ -210,7 +210,7 @@
         </div>
 
         <div class="DDU3R">
-          <select id="u_misura_r">
+          <select id="u_misura3_r">
             <option value="" >E³</option>
             <option value="" >P³</option>
             <option value="" >T³</option>
@@ -243,6 +243,83 @@
     <button id="reset_eq">Reset</button>
 
     <script>
+      var valueL = {
+        "E" : 10**18,
+        "P" : 10**15,
+        "T" : 10**12,
+        "G" : 10**9,
+        "M" : 10**6,
+        "K" : 10**3,
+        "h" : 10**2,
+        "da" : 10**1,
+        "u" : 10**0,
+        "d" : 10**(-1),
+        "c" : 10**(-2),
+        "m" : 10**(-3),
+        "µ" : 10**(-6),
+        "n" : 10**(-9),
+        "p" : 10**(-12),
+        "f" : 10**(-15),
+        "a" : 10**(-18)
+      }
+
+      function copyToClipboard(id){
+        var copyText = document.getElementById(id);
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+      }
+
+      document.getElementById("clc1").addEventListener("click", function(e){
+        var intValue = document.getElementById("1_eq").valueAsNumber
+        var firstSelect = document.getElementById("u_misura").options[document.getElementById("u_misura").selectedIndex].text
+        var secondSelect = document.getElementById("u_misura_r").options[document.getElementById("u_misura_r").selectedIndex].text
+        var outValue = (intValue * valueL[firstSelect]) / valueL[secondSelect]
+        document.getElementById("risultato_eq1").innerHTML = outValue
+        e.preventDefault()
+      })
+
+      document.getElementById("ris_eq1").addEventListener("click", function(e){
+        copyToClipboard("risultato_eq1")
+      })
+
+      document.getElementById("clc2").addEventListener("click", function(e){
+        var intValue2 = document.getElementById("2_eq").valueAsNumber
+        var firstSelect2 = document.getElementById("u_misura2").options[document.getElementById("u_misura2").selectedIndex].text.replace("²", "")
+        var secondSelect2 = document.getElementById("u_misura2_r").options[document.getElementById("u_misura2_r").selectedIndex].text.replace("²", "")
+        var outValue2 = (intValue2 * (valueL[firstSelect2]**2)) / (valueL[secondSelect2]**2)
+        document.getElementById("risultato_eq2").innerHTML = outValue2
+        e.preventDefault()
+      })
+
+      document.getElementById("ris_eq2").addEventListener("click", function(e){
+        copyToClipboard("risultato_eq2")
+      })
+
+      document.getElementById("clc3").addEventListener("click", function(e){
+        var intValue3 = document.getElementById("3_eq").valueAsNumber
+        var firstSelect3 = document.getElementById("u_misura3").options[document.getElementById("u_misura3").selectedIndex].text.replace("³", "")
+        var secondSelect3 = document.getElementById("u_misura3_r").options[document.getElementById("u_misura3_r").selectedIndex].text.replace("³", "")
+        var outValue3 = (intValue3 * (valueL[firstSelect3]**3)) / (valueL[secondSelect3]**3)
+        document.getElementById("risultato_eq3").innerHTML = outValue3
+        e.preventDefault()
+      })
+
+      document.getElementById("ris_eq3").addEventListener("click", function(e){
+        copyToClipboard("risultato_eq3")
+      })
+
+      document.getElementById("reset_eq").addEventListener("click", function(e){
+        document.getElementById("Eq").reset()
+        document.getElementById("risultato_eq1").innerHTML = ""
+        document.getElementById("risultato_eq2").innerHTML = ""
+        document.getElementById("risultato_eq3").innerHTML = ""
+        e.preventDefault()
+      })
     </script>
 
   </body>

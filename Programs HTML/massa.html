@@ -93,6 +93,51 @@
     <button id="reset_m">Reset</button>
 
     <script>
+      densityValue = {
+        "Acqua" : 1000,
+        "Acqua Salata" : 1030,
+        "Alluminio" : 2750,
+        "Argento" : 10500,
+        "Aria" : 1.293,
+        "Carta" : 970,
+        "Diamante" : 3550,
+        "Ferro" : 7880,
+        "Latte" : 1034,
+        "Marmo" : 2800,
+        "Mercurio" : 13500,
+        "Oro" : 19250,
+        "Piombo" : 11340,
+        "Platino" : 21400,
+        "Stagno" : 7280,
+        "Sughero" : 350
+      }
+
+      function copyToClipboard(id){
+        var copyText = document.getElementById(id);
+        var textArea = document.createElement("textArea")
+        textArea.value = copyText.textContent.toString()
+        document.body.appendChild(textArea)
+        textArea.select();
+        textArea.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        textArea.remove()
+      }
+
+      document.getElementById("calc_m").addEventListener("click", function(e){
+        var intValue = document.getElementById("volume").valueAsNumber
+        var selected= document.getElementById("u_misura_m").options[document.getElementById("u_misura_m").selectedIndex].text 
+        var outValue = intValue * densityValue[selected]
+        document.getElementById("risultato_m").innerHTML = outValue
+        e.preventDefault()
+      })
+      document.getElementById("ris_m").addEventListener("click", function(e){
+        copyToClipboard("risultato_m")
+      })
+
+      document.getElementById("reset_m").addEventListener("click", function(e){
+        document.getElementById("Massa").reset()
+        document.getElementById("risultato_m").innerHTML = ""
+      })
     </script>
 
   </body>
