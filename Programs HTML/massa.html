@@ -127,7 +127,7 @@
         var intValue = document.getElementById("volume").valueAsNumber
         var selected= document.getElementById("u_misura_m").options[document.getElementById("u_misura_m").selectedIndex].text 
         var outValue = intValue * densityValue[selected]
-        document.getElementById("risultato_m").innerHTML = outValue
+        document.getElementById("risultato_m").innerHTML = outValue + " Kg"
         e.preventDefault()
       })
       document.getElementById("ris_m").addEventListener("click", function(e){

@@ -163,7 +163,7 @@
         var secondSelectMeter = document.getElementById("u_misura2_m").options[document.getElementById("u_misura2_m").selectedIndex].text
         var secondSelectTime = document.getElementById("u_misura2_t").options[document.getElementById("u_misura2_t").selectedIndex].text
         var outValue = ((intValue * distanceValue[firstSelectMeter]) / distanceValue[secondSelectMeter]) / (timeValue[firstSelectTime] / timeValue[secondSelectTime])
-        document.getElementById("risultato_cv").innerHTML = outValue
+        document.getElementById("risultato_cv").innerHTML = outValue + " " + secondSelectMeter + "/" + secondSelectTime
         e.preventDefault()
       })
       
